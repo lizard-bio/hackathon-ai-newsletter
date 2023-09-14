@@ -22,6 +22,7 @@ import openai
 import os
 import requests
 import sys
+import yaml
 
 from dotenv import load_dotenv
 
@@ -102,8 +103,8 @@ def main(argv):
 
 def read_summary(file):
 	with open(file, 'r') as fh:
-		file_content = fh.read()
-	return file_content
+		file_content = yaml.safe_load()
+	return file_content['summary']
 
 
 def save_image_from_url(url, file):
