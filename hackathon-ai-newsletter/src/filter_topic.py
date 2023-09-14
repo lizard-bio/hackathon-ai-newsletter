@@ -1,9 +1,25 @@
-from pymed import PubMed
 from datetime import date
+import openai
+import os
+from pymed import PubMed
 import time
 import yaml
 
+from dotenv import load_dotenv
 
+# Make sure to add your OpenAI API key to the .env file!
+BROAD_TOPIC = "single cell genomics"
+NARROW_TOPIC = "spatial single cell genomics"
+MODEL = "gpt-3.5-turbo"
+EMAIL = "steff.taelman@lizard.bio"
+#EMAIL = "add.your@e.mail"
+OUTFILE = "filtered-sc-genomics-7days.yaml"
+#load_dotenv()
+#openai.api_key = os.environ.get("OPENAI_API_KEY") # or openai.api_key = "sk-xxx"
+openai.api_key = "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"
+
+
+### query pubmed for articles
 def get_recent_articles(topic, email, outfile=None, timeframe=7):
     """
     A function to query PubMed for articles published within a given timeframe.
@@ -38,6 +54,7 @@ def get_recent_articles(topic, email, outfile=None, timeframe=7):
                 articleList.append(articleDict)
                 time.sleep(0.5) # to avoid overloading the API
             else:
+                #print("Found more than 99, this might take a while...")
                 searched_full_timeframe = True
                 break
 
@@ -51,7 +68,7 @@ def get_recent_articles(topic, email, outfile=None, timeframe=7):
             'publication_date': article['publication_date'],
             'keywords': article['keywords'],
             'abstract': article['abstract'],
-            'doi': article['doi']
+            'doi': article['doi'].split('\n')[0]
         })
     print("Found {} articles!".format(len(articleList)))
     if outfile is None:
@@ -60,3 +77,37 @@ def get_recent_articles(topic, email, outfile=None, timeframe=7):
         with open(outfile, "w") as f:
             yaml.dump(articleInfo, f)
         return "Output written to {}".format(outfile)
+
+article_info = get_recent_articles(BROAD_TOPIC, EMAIL, timeframe=7)
+article_info = [i for i in article_info if i['abstract'] is not None]
+# load abstracts
+abstracts = []
+for article in article_info:
+    if article['abstract'] is not None:
+        abstracts.append(article['abstract'])
+
+
+# filter abstracts by topic
+classifications = []
+for i in abstracts:
+    prompt = "Below is an academic abstract, enclosed by triple backticks. Based on the asbtract, please type 'yes' or 'no' indicating whether the abstract is relevant to the topic of "
+    prompt += NARROW_TOPIC + ".\n\n```" + i + "```"
+
+    response = openai.ChatCompletion.create(
+        model=MODEL,
+        top_p=0,
+        presence_penalty=-2,
+        messages=[
+            {'role': 'system', 'content': 'Your job is to distinguish whether a number of paragraphs of text belong to a given topic.'},
+            {'role': 'user', 'content': prompt}
+        ]
+    )
+    classifications.append(response['choices'][0]['message']['content'])
+
+article_info = [i for (idx, i) in enumerate(article_info) if classifications[idx]=="Yes"]
+
+### output to YAML file
+with open(OUTFILE, "w") as f:
+    yaml.dump(article_info, f)
+
+print("Output written to {}".format(OUTFILE))
