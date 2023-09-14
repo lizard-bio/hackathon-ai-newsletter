@@ -29,6 +29,7 @@ from dotenv import load_dotenv
 
 
 def build_dalle_prompt(text):
+	text = re.sub(r' \[\d+\].+$', '', text)
 	response = openai.ChatCompletion.create(
 		model="gpt-4",
 		messages=[
@@ -36,13 +37,8 @@ def build_dalle_prompt(text):
 				prompt for DALL-E to create a captivating image to accompany the text.'},
 			{'role': 'user', 'content': f"""
 				Below is a combined summary of several scientific publications, enclosed by triple backticks.
-				Based on this summary, create a prompt for DALL-E so that it can generate a beautiful and 
-				captivating image to visually represent the summary.
-				
-				This is a list of rules you must follow when creating the prompt:
-				- the prompt cannot be longer than 50 words
-				- the prompt should consist of a list of keywords, separated by commas
-				- the prompt must be simple, descriptive, and specific
+				Used this summary to create a prompt for DALL-E to generate a beautiful and captivating
+				image to visually represent the summary. The prompt must be shorter than 30 tokens.
 
 				```{text}```
 				"""}
@@ -51,7 +47,9 @@ def build_dalle_prompt(text):
 	#- the prompt must include the words "captivating", "scientific", "nature", 
 	#			"publication-ready", and "science"
 	prompt = response['choices'][0]['message']['content']
-	prompt += ', digital art, high resolution'
+	prompt = prompt.replace('.', '')
+	prompt = prompt.replace('"', '')
+	prompt += ', microscopy, cellular biology'
 	return prompt
 
 
@@ -112,7 +110,6 @@ def read_summary(file):
 	with open(file, 'r') as fh:
 		file_content = yaml.safe_load(fh)
 	summary = file_content[0]['summary']
-	summary = re.sub(r' \[\d+\]', '', summary)
 	return summary
 
 
