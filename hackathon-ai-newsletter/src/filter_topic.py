@@ -11,12 +11,10 @@ from dotenv import load_dotenv
 BROAD_TOPIC = "single cell genomics"
 NARROW_TOPIC = "spatial single cell genomics"
 MODEL = "gpt-3.5-turbo"
-EMAIL = "steff.taelman@lizard.bio"
-#EMAIL = "add.your@e.mail"
+EMAIL = "add.your@e.mail"
 OUTFILE = "filtered-sc-genomics-7days.yaml"
-#load_dotenv()
-#openai.api_key = os.environ.get("OPENAI_API_KEY") # or openai.api_key = "sk-xxx"
-openai.api_key = "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"
+load_dotenv()
+openai.api_key = os.environ.get("OPENAI_API_KEY") # or openai.api_key = "sk-xxx"
 
 
 ### query pubmed for articles
