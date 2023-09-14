@@ -41,15 +41,18 @@ def build_dalle_prompt(text):
 				
 				This is a list of rules you must follow when creating the prompt:
 				- the prompt cannot be longer than 50 words
+				- the prompt should consist of a list of keywords, separated by commas
 				- the prompt must be simple, descriptive, and specific
-				- the prompt must include the words "captivating", "scientific", "nature", 
-				"publication-ready", and "science"
 
 				```{text}```
 				"""}
 		]
 	)
-	return response['choices'][0]['message']['content']
+	#- the prompt must include the words "captivating", "scientific", "nature", 
+	#			"publication-ready", and "science"
+	prompt = response['choices'][0]['message']['content']
+	prompt += ', digital art, high resolution'
+	return prompt
 
 
 def generate_image(prompt):
