@@ -20,6 +20,7 @@ python dalle.py \
 import getopt
 import openai
 import os
+import re
 import requests
 import sys
 import yaml
@@ -104,7 +105,9 @@ def main(argv):
 def read_summary(file):
 	with open(file, 'r') as fh:
 		file_content = yaml.safe_load(fh)
-	return file_content[0]['summary']
+	summary = file_content[0]['summary']
+	summary = re.sub(r' \[\d+\]', '', summary)
+	return summary
 
 
 def save_image_from_url(url, file):
