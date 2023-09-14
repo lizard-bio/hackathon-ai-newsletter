@@ -29,7 +29,7 @@ from dotenv import load_dotenv
 
 def build_dalle_prompt(text):
 	response = openai.ChatCompletion.create(
-		model="gpt-3.5-turbo",
+		model="gpt-4",
 		messages=[
 			{'role': 'system', 'content': 'Your job is to take some scientific text and generate a \
 				prompt for DALL-E to create a captivating image to accompany the text.'},
