@@ -103,7 +103,7 @@ def main(argv):
 
 def read_summary(file):
 	with open(file, 'r') as fh:
-		file_content = yaml.safe_load()
+		file_content = yaml.safe_load(fh)
 	return file_content['summary']
 
 
