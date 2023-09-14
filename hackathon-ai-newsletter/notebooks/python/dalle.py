@@ -96,9 +96,9 @@ def main(argv):
 	image_url = generate_image(dalle_prompt)
 	if image_url:
 		save_image_from_url(image_url, output_file)
-		print(f'\nYour image is ready 🥳 and stored here: {output_file}')
+		print(f'\nYour image is ready 🥳 and stored here: {output_file}\n')
 	else:
-		print('\nCould not generate a DALL-E image 💀')
+		print('\nCould not generate a DALL-E image 💀\n')
 
 
 def read_summary(file):
