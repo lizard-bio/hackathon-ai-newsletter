@@ -1,0 +1,1929 @@
+- abstract: Bacterial remineralization of algal organic matter fuels algal growth
+    but is rarely quantified. Consequently, we cannot currently predict whether some
+    bacterial taxa may provide more remineralized nutrients to algae than others.
+    Here, we quantified bacterial incorporation of algal-derived complex dissolved
+    organic carbon and nitrogen and algal incorporation of remineralized carbon and
+    nitrogen in fifteen bacterial co-cultures growing with the diatom Phaeodactylum
+    tricornutum at the single-cell level using isotope tracing and nanoSIMS. We found
+    unexpected strain-to-strain and cell-to-cell variability in net carbon and nitrogen
+    incorporation, including non-ubiquitous complex organic nitrogen utilization and
+    remineralization. We used these data to identify three distinct functional guilds
+    of metabolic interactions, which we termed macromolecule remineralizers, macromolecule
+    users, and small-molecule users, the latter exhibiting efficient growth under
+    low carbon availability. The functional guilds were not linked to phylogeny and
+    could not be elucidated strictly from metabolic capacity as predicted by comparative
+    genomics, highlighting the need for direct activity-based measurements in ecological
+    studies of microbial metabolic interactions.
+  altmetric_attention_score: 0.25
+  altmetric_attention_score_rank: 18.5
+  authors:
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA. mayali1@llnl.gov.
+    firstname: Xavier
+    initials: X
+    lastname: Mayali
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Ty J
+    initials: TJ
+    lastname: Samo
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Jeff A
+    initials: JA
+    lastname: Kimbrel
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Megan M
+    initials: MM
+    lastname: Morris
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Kristina
+    initials: K
+    lastname: Rolison
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Courtney
+    initials: C
+    lastname: Swink
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Christina
+    initials: C
+    lastname: Ramon
+  - affiliation: Earth and Biological Sciences Directorate, Pacific Northwest National
+      Laboratory, Richland, WA, 99352, USA.
+    firstname: Young-Mo
+    initials: YM
+    lastname: Kim
+  - affiliation: Earth and Biological Sciences Directorate, Pacific Northwest National
+      Laboratory, Richland, WA, 99352, USA.
+    firstname: Nathalie
+    initials: no
+    lastname: Munoz-Munoz
+  - affiliation: Earth and Biological Sciences Directorate, Pacific Northwest National
+      Laboratory, Richland, WA, 99352, USA.
+    firstname: Carrie
+    initials: C
+    lastname: Nicora
+  - affiliation: Earth and Biological Sciences Directorate, Pacific Northwest National
+      Laboratory, Richland, WA, 99352, USA.
+    firstname: Sam
+    initials: S
+    lastname: Purvine
+  - affiliation: Earth and Biological Sciences Directorate, Pacific Northwest National
+      Laboratory, Richland, WA, 99352, USA.
+    firstname: Mary
+    initials: M
+    lastname: Lipton
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Rhona K
+    initials: RK
+    lastname: Stuart
+  - affiliation: Physical and Life Sciences Directorate, Lawrence Livermore National
+      Laboratory, Livermore, CA, USA.
+    firstname: Peter K
+    initials: PK
+    lastname: Weber
+  doi: 10.1038/s41467-023-41179-9
+  journal: nature communications
+  keywords: []
+  n_citation: 1.0
+  n_citation_rank: 16.5
+  publication_date: '2023-09-14'
+  title: Single-cell isotope tracing reveals functional guilds of bacteria associated
+    with the diatom Phaeodactylum tricornutum.
+  if_rank: 227
+- abstract: |-
+    Observational studies have linked lipid-lowering drug targets Pro-protein convertase subtilisin/kexin 9 (PCSK9) and HMG-CoA Reductase (HMGCR) with adverse liver outcomes; however, liver disease incidence varies across diverse populations and the long-term hepatic impact of these lipid-lowering drugs among non-white Europeans remains largely unknown.
+    We use single-nucleotide polymorphisms (SNPs) in PCSK9 and HMGCR loci from genome-wide association study (GWAS) data of low-density lipoprotein cholesterol (LDL-C) in four populations (East Asian [EAS], South Asian [SAS], African [AFR], and European [EUR]) to perform drug-target Mendelian randomization (MR) investigating relationships between PCSK9 and HMGCR inhibition and alanine aminotransferase (ALT), aspartate aminotransferase (AST), gamma-glutamyltransferase (GGT), alkaline phosphatase (ALP), and bilirubin.
+    Analyses of PCSK9 instruments, including functional variants R46L and E670G, failed to find evidence for relationships of LDL-C lowering via PCSK9 variants and adverse effects on ALT, AST, GGT, or ALP among the cohorts. PCSK9 inhibition was associated with increased direct bilirubin levels in EUR (β=0.089, p-value=5.69×10
+  altmetric_attention_score: 1.75
+  altmetric_attention_score_rank: 13.0
+  authors:
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA; Oxford Centre for Diabetes, Endocrinology and Metabolism, University
+      of Oxford, Oxford, UK.
+    firstname: Daniel B
+    initials: DB
+    lastname: Rosoff
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA.
+    firstname: Andrew S
+    initials: AS
+    lastname: Bell
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA.
+    firstname: Josephin
+    initials: J
+    lastname: Wagner
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA.
+    firstname: Lucas A
+    initials: LA
+    lastname: Mavromatis
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA.
+    firstname: Ali
+    initials: A
+    lastname: Hamandi
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA.
+    firstname: Lauren
+    initials: L
+    lastname: Park
+  - affiliation: Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA.
+    firstname: Jeesun
+    initials: J
+    lastname: Jung
+  - affiliation: 'Section on Clinical Genomics and Experimental Therapeutics, National
+      Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Bethesda,
+      MD, USA. Electronic address: falk.lohoff@nih.gov.'
+    firstname: Falk W
+    initials: FW
+    lastname: Lohoff
+  doi: 10.1016/j.jcmgh.2023.09.001
+  journal: cellular and molecular gastroenterology and hepatology
+  keywords:
+  - PCSK9
+  - URM/URIM
+  - bias
+  - diversity and equality
+  - drug-target Mendelian randomization
+  - hepatotoxicity
+  - statins
+  n_citation: 3.0
+  n_citation_rank: 11.0
+  publication_date: '2023-09-14'
+  title: 'Assessing the impact of PCSK9 and HMGCR inhibition on liver function: drug-target
+    Mendelian Randomization analyses in 4 ancestries.'
+  if_rank: 584
+- abstract: Autistic spectrum disorder (ASD) is a male-biased heterogeneous neurodevelopmental
+    disorder that affects approximately 1%-2% of the population. Prenatal exposure
+    to valproic acid (VPA) is a recognized risk factor for ASD, but the cellular and
+    molecular basis of VPA-induced ASD at the single-cell resolution is unclear. Here,
+    we aimed to compare the cellular and molecular differences in the hippocampus
+    between male and female prenatal mice with ASD at the single-cell transcriptomic
+    level. The transcriptomes of more than 45,000 cells were assigned to 12 major
+    cell types, including neurons, glial cells, vascular cells, and immune cells.
+    Cell type-specific genes with altered expression after prenatal VPA exposure were
+    analyzed, and the largest number of differentially expressed genes (DEGs) were
+    found in neurons, choroid plexus epithelial cells, and microglia. In microglia,
+    several pathways related to inflammation were found in both males and females,
+    including the TNF, NF-κB, Toll-like receptor, and MAPK signaling pathways, which
+    are important for the induction of autistic-like behavior. Additionally, we noted
+    that several X-linked genes, including Bex1, Bex3, and Gria3, were among the male-specific
+    DEGs of neurons. This pioneering study describes the landscape of the transcriptome
+    in the hippocampus of autistic individuals. The elucidation of sexual differences
+    could provide innovative strategies for the prevention and treatment of ASD.
+  altmetric_attention_score: 0.5
+  altmetric_attention_score_rank: 17.0
+  authors:
+  - affiliation: Department of Neurology and Central Laboratory,Putuo Hospital,Shanghai
+      University of Traditional Chinese Medicine,Shanghai 200062,China.
+    firstname: Qian
+    initials: Q
+    lastname: Zhang
+  - affiliation: School of Pharmacy,Hangzhou Normal University,Hangzhou,Jiangsu 310030,China.
+    firstname: Yongjie
+    initials: yes
+    lastname: Wang
+  - affiliation: Department of Neurology and Central Laboratory,Putuo Hospital,Shanghai
+      University of Traditional Chinese Medicine,Shanghai 200062,China.
+    firstname: Jie
+    initials: J
+    lastname: Tao
+  - affiliation: Department of Respiratory and Critical Care Medicine,Henan University
+      Huaihe Hospital,Kaifeng,Henan 475099,China.
+    firstname: Ruixue
+    initials: R
+    lastname: Xia
+  - affiliation: Department of Respiratory and Critical Care Medicine,Henan University
+      Huaihe Hospital,Kaifeng,Henan 475099,China.
+    firstname: Yijie
+    initials: yes
+    lastname: Zhang
+  - affiliation: 'Department of Neurology and Central Laboratory,Putuo Hospital,Shanghai
+      University of Traditional Chinese Medicine,Shanghai 200062,China. Electronic
+      address: zrliu@sibs.ac.cn.'
+    firstname: Zhirui
+    initials: Z
+    lastname: Liu
+  - affiliation: 'Department of Neurology and Central Laboratory,Putuo Hospital,Shanghai
+      University of Traditional Chinese Medicine,Shanghai 200062,China. Electronic
+      address: chengjiwei1@126.com.'
+    firstname: Jiwei
+    initials: J
+    lastname: Cheng
+  doi: 10.1016/j.jgg.2023.08.012
+  journal: journal of genetics and genomics = yi chuan xue bao
+  keywords:
+  - Autistic spectrum disorder (ASD)
+  - microglia
+  - neurons
+  - sex
+  - single cell
+  n_citation: 1.0
+  n_citation_rank: 16.5
+  publication_date: '2023-09-14'
+  title: Sex-biased single cell genetic landscape in mice with autism spectrum disorder.
+  if_rank: []
+- abstract: |-
+    Multiple myeloma (MM) is a fatal malignant tumor in hematology. Mitophagy plays vital roles in the pathogenesis and drug sensitivity of MM.
+    We acquired transcriptomic expression data and clinical index of MM patients from NCI public database, and 36 genes involved in mitophagy from the gene set enrichment analysis (GSEA) database. Least absolute shrinkage and selection operator (LASSO) Cox regression analysis was conducted to construct a risk score prognostic model. Kaplan-Meier survival analysis and receiver operation characteristic curves (ROC) were conducted to identify the efficiency of prognosis and diagnosis. ESTIMATE algorithm and immune-related single-sample gene set enrichment analysis (ssGSEA) was performed to uncover the level of immune infiltration. QRT-PCR was performed to verify gene expression in clinical samples of MM patients. The sensitivity to chemotherapy drugs was evaluated upon the database of the genomics of drug sensitivity in cancer (GDSC).
+    Fifty mitophagy-related genes were differently expressed in two independent cohorts. Ten out of these genes were identified to be related to MM overall survival (OS) rate. A prognostic risk signature model was built upon on these genes: VDAC1, PINK1, VPS13C, ATG13, and HUWE1, which predicted the survival of MM accurately and stably both in training and validation cohorts. MM patients suffered more adverse prognosis showed more higher risk core. In addition, the risk score was considered as an independent prognostic element for OS of MM patients by multivariate cox regression analysis. Functional pathway enrichment analysis of differentially expressed genes (DEGs) based on risk score showed terms of cell cycle, immune response, mTOR pathway, and MYC targets were obviously enriched. Furthermore, MM patients with higher risk score were observed lower immune scores and lower immune infiltration levels. The results of qRT-PCR verified VDAC1, PINK1, and HUWE1 were dysregulated in new diagnosed MM patients. Finally, further analysis indicated MM patients showed more susceptive to bortezomib, lenalidomide and rapamycin in high-risk group.
+    Our research provided a neoteric prognostic model of MM based on mitophagy genes. The immune infiltration level based on risk score paved a better understanding of the participation of mitophagy in MM.
+  altmetric_attention_score: 0.25
+  altmetric_attention_score_rank: 18.5
+  authors:
+  - affiliation: |-
+      National and Local Joint Engineering Research Center of Biodiagnosis and Biotherapy, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China.
+      Department of Hematology, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China.
+    firstname: Yachun
+    initials: yes
+    lastname: Jia
+  - affiliation: Department of Hematology, The Second Affiliated Hospital of Xi'an
+      Jiaotong University, Xi'an, Shaanxi, PR China.
+    firstname: Rui
+    initials: R
+    lastname: Liu
+  - affiliation: Precision Medical Institute, The Second Affiliated Hospital of Xi'an
+      Jiaotong University, Xi'an, Shaanxi, PR China.
+    firstname: Luyi
+    initials: L
+    lastname: Shi
+  - affiliation: Department of Hematology, The Second Affiliated Hospital of Xi'an
+      Jiaotong University, Xi'an, Shaanxi, PR China.
+    firstname: Yuandong
+    initials: yes
+    lastname: Feng
+  - affiliation: |-
+      National and Local Joint Engineering Research Center of Biodiagnosis and Biotherapy, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China.
+      Precision Medical Institute, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China.
+    firstname: Linlin
+    initials: L
+    lastname: Zhang
+  - affiliation: National and Local Joint Engineering Research Center of Biodiagnosis
+      and Biotherapy, The Second Affiliated Hospital of Xi'an Jiaotong University,
+      Xi'an, Shaanxi, PR China.
+    firstname: Ni
+    initials: no
+    lastname: Guo
+  - affiliation: |-
+      National and Local Joint Engineering Research Center of Biodiagnosis and Biotherapy, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China. heaili@xjtu.edu.cn.
+      Department of Hematology, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China. heaili@xjtu.edu.cn.
+    firstname: Aili
+    initials: A
+    lastname: He
+  - affiliation: |-
+      National and Local Joint Engineering Research Center of Biodiagnosis and Biotherapy, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China. konggy@xjtu.edu.cn.
+      Department of Hematology, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China. konggy@xjtu.edu.cn.
+      Precision Medical Institute, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, PR China. konggy@xjtu.edu.cn.
+      Key Laboratory of Environment and Genes Related to Diseases, Xi'an Jiaotong University, Xi'an, Shaanxi, PR China. konggy@xjtu.edu.cn.
+    firstname: Guangyao
+    initials: G
+    lastname: Kong
+  doi: 10.1186/s12885-023-11371-7
+  journal: bmc cancer
+  keywords:
+  - Immune infiltration
+  - Mitophagy
+  - Multiple myeloma
+  - Nomogram
+  - Prognosis
+  - Risk signature
+  n_citation: 1.0
+  n_citation_rank: 16.5
+  publication_date: '2023-09-13'
+  title: Integrative analysis of the prognostic value and immune microenvironment
+    of mitophagy-related signature for multiple myeloma.
+  if_rank: 2994
+- abstract: The six species of lungfish possess both lungs and gills and are the closest
+    extant relatives of tetrapods. Here, we report a single-cell transcriptome atlas
+    of the West African lungfish (Protopterus annectens). This species manifests the
+    most extreme form of terrestrialization, a life history strategy to survive dry
+    periods that can last for years, characterized by dormancy and reversible adaptive
+    changes of the gills and lungs. Our atlas highlights the cell type diversity of
+    the West African lungfish, including gene expression consistent with phenotype
+    changes of terrestrialization. Comparison with terrestrial tetrapods and ray-finned
+    fishes reveals broad homology between the swim bladder and lung cell types as
+    well as shared and idiosyncratic changes of the external gills of the West African
+    lungfish and the internal gills of Atlantic salmon. The single-cell atlas presented
+    here provides a valuable resource for further exploration of the respiratory system
+    evolution in vertebrates and the diversity of lungfish terrestrialization.
+  altmetric_attention_score: 2.5
+  altmetric_attention_score_rank: 10.5
+  authors:
+  - affiliation: |-
+      College of Life Sciences, University of Chinese Academy of Sciences, 100049, Beijing, China.
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Ruihua
+    initials: R
+    lastname: Zhang
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+      Department of Biology, University of Copenhagen, Copenhagen, 2100, Denmark.
+    firstname: Qun
+    initials: Q
+    lastname: Liu
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Shanshan
+    initials: S
+    lastname: Pan
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Yingying
+    initials: yes
+    lastname: Zhang
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Yating
+    initials: yes
+    lastname: Qin
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+      BGI Research, 518083, Shenzhen, China.
+    firstname: Xiao
+    initials: X
+    lastname: Du
+  - affiliation: |-
+      College of Life Sciences, University of Chinese Academy of Sciences, 100049, Beijing, China.
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Zengbao
+    initials: Z
+    lastname: Yuan
+  - affiliation: State Key Laboratory of Freshwater Ecology and Biotechnology, Institute
+      of Hydrobiology, Chinese Academy of Sciences, 430072, Wuhan, China.
+    firstname: Yongrui
+    initials: yes
+    lastname: Lu
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Yue
+    initials: yes
+    lastname: Song
+  - affiliation: BGI Research, 266555, Qingdao, China.
+    firstname: Mengqi
+    initials: M
+    lastname: Zhang
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Nannan
+    initials: no
+    lastname: Zhang
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China.
+    firstname: Jie
+    initials: J
+    lastname: Ma
+  - affiliation: MGI Tech, 518083, Shenzhen, China.
+    firstname: Zhe
+    initials: Z
+    lastname: Zhang
+  - affiliation: Joint Laboratory for Translational Medicine Research, Liaocheng People's
+      Hospital, 252000, Liaocheng, Shandong, P.R. China.
+    firstname: Xiaodong
+    initials: X
+    lastname: Jia
+  - affiliation: Center for Ecological and Environmental Sciences, Northwestern Polytechnical
+      University, 710072, Xi'an, China.
+    firstname: Kun
+    initials: K
+    lastname: Wang
+  - affiliation: State Key Laboratory of Freshwater Ecology and Biotechnology, Institute
+      of Hydrobiology, Chinese Academy of Sciences, 430072, Wuhan, China.
+    firstname: Shunping
+    initials: S
+    lastname: He
+  - affiliation: |-
+      BGI Research, 518083, Shenzhen, China.
+      MGI Tech, 518083, Shenzhen, China.
+    firstname: Shanshan
+    initials: S
+    lastname: Liu
+  - affiliation: |-
+      BGI Research, 518083, Shenzhen, China.
+      MGI Tech, 518083, Shenzhen, China.
+    firstname: Ming
+    initials: M
+    lastname: Ni
+  - affiliation: BGI Research, 518083, Shenzhen, China.
+    firstname: Xin
+    initials: X
+    lastname: Liu
+  - affiliation: |-
+      BGI Research, 518083, Shenzhen, China.
+      Guangdong Provincial Key Laboratory of Genome Read and Write, BGI Research, 518083, Shenzhen, China.
+    firstname: Xun
+    initials: X
+    lastname: Xu
+  - affiliation: BGI Research, 518083, Shenzhen, China.
+    firstname: Huanming
+    initials: H
+    lastname: Yang
+  - affiliation: BGI Research, 518083, Shenzhen, China.
+    firstname: Jian
+    initials: J
+    lastname: Wang
+  - affiliation: |-
+      Integrative Biology Laboratory, College of Life Sciences, Nanjing Normal University, Nanjing, China. inge@seimlab.org.
+      School of Biology and Environmental Science, Queensland University of Technology, Brisbane, 4000, Australia. inge@seimlab.org.
+    firstname: Inge
+    initials: I
+    lastname: Seim
+  - affiliation: |-
+      BGI Research, 266555, Qingdao, China. fanguangyi@genomics.cn.
+      Qingdao Key Laboratory of Marine Genomics, BGI Research, 266555, Qingdao, China. fanguangyi@genomics.cn.
+      BGI Research, 518083, Shenzhen, China. fanguangyi@genomics.cn.
+    firstname: Guangyi
+    initials: G
+    lastname: Fan
+  doi: 10.1038/s41467-023-41309-3
+  journal: nature communications
+  keywords: []
+  n_citation: 7.0
+  n_citation_rank: 8.5
+  publication_date: '2023-09-13'
+  title: A single-cell atlas of West African lungfish respiratory system reveals evolutionary
+    adaptations to terrestrialization.
+  if_rank: 227
+- abstract: The lack of genome editing platforms has hampered efforts to study and
+    improve forage crops that can be grown on lands not suited to other crops. Here,
+    we established efficient Agrobacterium-mediated CRISPR/Cas9 genome editing in
+    a perennial, stress-tolerant forage grass, sheepgrass (Leymus chinensis). By screening
+    for active single-guide RNAs (sgRNAs), accessions that regenerate well, suitable
+    Agrobacterium strains, and optimal culture media, and co-expressing the morphogenic
+    factor TaWOX5, we achieved 11% transformation and 5.83% editing efficiency in
+    sheepgrass. Knocking out Teosinte Branched1 (TB1) significantly increased tiller
+    number and biomass. This study opens avenues for studying gene function and breeding
+    in sheepgrass. This article is protected by copyright. All rights reserved.
+  altmetric_attention_score: 1.0
+  altmetric_attention_score_rank: 14.5
+  authors:
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Zhelong
+    initials: Z
+    lastname: Lin
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Lei
+    initials: L
+    lastname: Chen
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Shanjie
+    initials: S
+    lastname: Tang
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Mengjie
+    initials: M
+    lastname: Zhao
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Tong
+    initials: T
+    lastname: Li
+  - affiliation: Institute of Forage and Grassland Sciences, Heilongjiang Academy
+      of Agricultural Sciences, Harbin, 150086, China.
+    firstname: Jia
+    initials: J
+    lastname: You
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Changqing
+    initials: C
+    lastname: You
+  - affiliation: State Key Laboratory of Plant Cell and Chromosome Engineering, Center
+      for Genome Editing, Institute of Genetics and Developmental Biology, Chinese
+      Academy of Sciences, Beijing, 100101, China.
+    firstname: Boshu
+    initials: B
+    lastname: Li
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Qinghua
+    initials: Q
+    lastname: Zhao
+  - affiliation: Institute of Forage and Grassland Sciences, Heilongjiang Academy
+      of Agricultural Sciences, Harbin, 150086, China.
+    firstname: Dongmei
+    initials: D
+    lastname: Zhang
+  - affiliation: Institute of Forage and Grassland Sciences, Heilongjiang Academy
+      of Agricultural Sciences, Harbin, 150086, China.
+    firstname: Jianli
+    initials: J
+    lastname: Wang
+  - affiliation: Institute of Forage and Grassland Sciences, Heilongjiang Academy
+      of Agricultural Sciences, Harbin, 150086, China.
+    firstname: Zhongbao
+    initials: Z
+    lastname: Shen
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Xianwei
+    initials: X
+    lastname: Song
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Shuaibin
+    initials: S
+    lastname: Zhang
+  - affiliation: State Key Laboratory of Plant Genomics and National Center for Plant
+      Gene Research, Institute of Genetics and Developmental Biology, Chinese Academy
+      of Sciences, Beijing, 100101, China.
+    firstname: Xiaofeng
+    initials: X
+    lastname: Cao
+  doi: 10.1111/jipb.13567
+  journal: journal of integrative plant biology
+  keywords:
+  - |2
+
+    Agrobacterium
+  - |2
+
+    LcTB1
+  - genetic transformation
+  - genome editing
+  - sheepgrass
+  n_citation: 1.0
+  n_citation_rank: 16.5
+  publication_date: '2023-09-12'
+  title: Efficient CRISPR/Cas9-mediated genome editing in sheepgrass (Leymus chinensis).
+  if_rank: 1222
+- abstract: |-
+    Comparative gene expression studies in apes are fundamentally limited by the challenges associated with sampling across different tissues. Here, we used single-cell RNA sequencing of embryoid bodies to collect transcriptomic data from over 70 cell types in three humans and three chimpanzees.
+    We find hundreds of genes whose regulation is conserved across cell types, as well as genes whose regulation likely evolves under directional selection in one or a handful of cell types. Using embryoid bodies from a human-chimpanzee fused cell line, we also infer the proportion of inter-species regulatory differences due to changes in cis and trans elements between the species. Using the cis/trans inference and an analysis of transcription factor binding sites, we identify dozens of transcription factors whose inter-species differences in expression are affecting expression differences between humans and chimpanzees in hundreds of target genes.
+    Here, we present the most comprehensive dataset of comparative gene expression from humans and chimpanzees to date, including a catalog of regulatory mechanisms associated with inter-species differences.
+  altmetric_attention_score: 13.15
+  altmetric_attention_score_rank: 5.0
+  authors:
+  - affiliation: Department of Medicine, University of Chicago, Chicago, IL, 60637,
+      USA.
+    firstname: Kenneth A
+    initials: KA
+    lastname: Barr
+  - affiliation: Department of Medicine, University of Chicago, Chicago, IL, 60637,
+      USA.
+    firstname: Katherine L
+    initials: KL
+    lastname: Rhodes
+  - affiliation: |-
+      Department of Medicine, University of Chicago, Chicago, IL, 60637, USA. gilad@uchicago.edu.
+      Department of Human Genetics, University of Chicago, Chicago, IL, 60637, USA. gilad@uchicago.edu.
+    firstname: Yoav
+    initials: yes
+    lastname: Gilad
+  doi: 10.1186/s13059-023-03019-3
+  journal: genome biology
+  keywords:
+  - Chimpanzee
+  - Comparative genomics
+  - Gene expression
+  - Gene regulation
+  n_citation: 25.0
+  n_citation_rank: 6.0
+  publication_date: '2023-09-12'
+  title: The relationship between regulatory changes in cis and trans and the evolution
+    of gene expression in humans and chimpanzees.
+  if_rank: 278
+- abstract: Although multiple pancreatic islet single-cell RNA-sequencing (scRNA-seq)
+    datasets have been generated, a consensus on pancreatic cell states in development,
+    homeostasis and diabetes as well as the value of preclinical animal models is
+    missing. Here, we present an scRNA-seq cross-condition mouse islet atlas (MIA),
+    a curated resource for interactive exploration and computational querying. We
+    integrate over 300,000 cells from nine scRNA-seq datasets consisting of 56 samples,
+    varying in age, sex and diabetes models, including an autoimmune type 1 diabetes
+    model (NOD), a glucotoxicity/lipotoxicity type 2 diabetes model (db/db) and a
+    chemical streptozotocin β-cell ablation model. The β-cell landscape of MIA reveals
+    new cell states during disease progression and cross-publication differences between
+    previously suggested marker genes. We show that β-cells in the streptozotocin
+    model transcriptionally correlate with those in human type 2 diabetes and mouse
+    db/db models, but are less similar to human type 1 diabetes and mouse NOD β-cells.
+    We also report pathways that are shared between β-cells in immature, aged and
+    diabetes models. MIA enables a comprehensive analysis of β-cell responses to different
+    stressors, providing a roadmap for the understanding of β-cell plasticity, compensation
+    and demise.
+  altmetric_attention_score: 38.6
+  altmetric_attention_score_rank: 3.0
+  authors:
+  - affiliation: |-
+      Institute of Computational Biology, Helmholtz Zentrum München, Neuherberg, Germany.
+      TUM School of Life Sciences Weihenstephan, Technical University of Munich, Freising, Germany.
+    firstname: Karin
+    initials: K
+    lastname: Hrovatin
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany.
+      Medical Faculty, Technical University of Munich, Munich, Germany.
+    firstname: Aimée
+    initials: A
+    lastname: Bastidas-Ponce
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany.
+    firstname: Mostafa
+    initials: M
+    lastname: Bakhti
+  - affiliation: |-
+      Institute of Computational Biology, Helmholtz Zentrum München, Neuherberg, Germany.
+      Department of Mathematics, Technical University of Munich, Garching, Germany.
+    firstname: Luke
+    initials: L
+    lastname: Zappia
+  - affiliation: |-
+      Institute of Computational Biology, Helmholtz Zentrum München, Neuherberg, Germany.
+      Genomics and Immunoregulation, Life & Medical Sciences (LIMES) Institute, University of Bonn, Bonn, Germany.
+      Systems Medicine, Deutsches Zentrum für Neurodegenerative Erkrankungen (DZNE), Bonn, Germany.
+    firstname: Maren
+    initials: M
+    lastname: Büttner
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany.
+      Medical Faculty, Technical University of Munich, Munich, Germany.
+    firstname: Ciro
+    initials: C
+    lastname: Salinno
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany.
+    firstname: Michael
+    initials: M
+    lastname: Sterr
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany.
+    firstname: Anika
+    initials: A
+    lastname: Böttcher
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany.
+      McEwen Stem Cell Institute, University Health Network (UHN), Toronto, Ontario, Canada.
+    firstname: Adriana
+    initials: A
+    lastname: Migliorini
+  - affiliation: |-
+      Institute of Diabetes and Regeneration Research, Helmholtz Zentrum München, Neuherberg, Germany. heiko.lickert@helmholtz-muenchen.de.
+      German Center for Diabetes Research (DZD), Neuherberg, Germany. heiko.lickert@helmholtz-muenchen.de.
+      Medical Faculty, Technical University of Munich, Munich, Germany. heiko.lickert@helmholtz-muenchen.de.
+    firstname: Heiko
+    initials: H
+    lastname: Lickert
+  - affiliation: |-
+      Institute of Computational Biology, Helmholtz Zentrum München, Neuherberg, Germany. fabian.theis@helmholtz-muenchen.de.
+      TUM School of Life Sciences Weihenstephan, Technical University of Munich, Freising, Germany. fabian.theis@helmholtz-muenchen.de.
+      Department of Mathematics, Technical University of Munich, Garching, Germany. fabian.theis@helmholtz-muenchen.de.
+    firstname: Fabian J
+    initials: FJ
+    lastname: Theis
+  doi: 10.1038/s42255-023-00876-x
+  journal: nature metabolism
+  keywords: []
+  n_citation: 55.0
+  n_citation_rank: 2.0
+  publication_date: '2023-09-12'
+  title: Delineating mouse β-cell identity during lifetime and in diabetes with a
+    single cell atlas.
+  if_rank: []
+- abstract: Male breast cancer (MBC) is a rare but aggressive malignancy with cellular
+    and immunological characteristics that remain unclear. Here, we perform transcriptomic
+    analysis for 111,038 single cells from tumor tissues of six MBC and thirteen female
+    breast cancer (FBC) patients. We find that that MBC has significantly lower infiltration
+    of T cells relative to FBC. Metastasis-related programs are more active in cancer
+    cells from MBC. The activated fatty acid metabolism involved with FASN is related
+    to cancer cell metastasis and low immune infiltration of MBC. T cells in MBC show
+    activation of p38 MAPK and lipid oxidation pathways, indicating a dysfunctional
+    state. In contrast, T cells in FBC exhibit higher expression of cytotoxic markers
+    and immune activation pathways mediated by immune-modulatory cytokines. Moreover,
+    we identify the inhibitory interactions between cancer cells and T cells in MBC.
+    Our study provides important information for understanding the tumor immunology
+    and metabolism of MBC.
+  altmetric_attention_score: 7.0
+  altmetric_attention_score_rank: 7.0
+  authors:
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Handong
+    initials: H
+    lastname: Sun
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Lishen
+    initials: L
+    lastname: Zhang
+  - affiliation: Department of Breast Surgery, The Second People's Hospital of Lianyungang,
+      41 Hailian East Road, 222006, Lianyungang, China.
+    firstname: Zhonglin
+    initials: Z
+    lastname: Wang
+  - affiliation: National Health Commission Key Laboratory of Antibody Techniques,
+      Department of Cell Biology, Jiangsu Provincial Key Laboratory of Human Functional
+      Genomics, School of Basic Medical Sciences, Nanjing Medical University, 211166,
+      Nanjing, Jiangsu, China.
+    firstname: Danling
+    initials: D
+    lastname: Gu
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Mengyan
+    initials: M
+    lastname: Zhu
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Yun
+    initials: yes
+    lastname: Cai
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Lu
+    initials: L
+    lastname: Li
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Jiaqi
+    initials: J
+    lastname: Tang
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Bin
+    initials: B
+    lastname: Huang
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Bakwatanisa
+    initials: B
+    lastname: Bosco
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Ning
+    initials: no
+    lastname: Li
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Lingxiang
+    initials: L
+    lastname: Wu
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Wei
+    initials: W
+    lastname: Wu
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Liangyu
+    initials: L
+    lastname: Li
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Yuan
+    initials: yes
+    lastname: Liang
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Lin
+    initials: L
+    lastname: Luo
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China.
+    firstname: Quanzhong
+    initials: Q
+    lastname: Liu
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Yanhui
+    initials: yes
+    lastname: Zhu
+  - affiliation: Department of Breast Surgery, The First Affiliated Hospital of Soochow
+      University, 188 Shizi Street, 215006, Suzhou, China.
+    firstname: Jie
+    initials: J
+    lastname: Sun
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Liang
+    initials: L
+    lastname: Shi
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Tiansong
+    initials: T
+    lastname: Xia
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Chuang
+    initials: C
+    lastname: Yang
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Qitong
+    initials: Q
+    lastname: Xu
+  - affiliation: Department of Pathology, The First Affiliated Hospital with Nanjing
+      Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Xue
+    initials: X
+    lastname: Han
+  - affiliation: Department of Pathology, The First Affiliated Hospital with Nanjing
+      Medical University, 300 Guangzhou Road, 210029, Nanjing, China.
+    firstname: Weiming
+    initials: W
+    lastname: Zhang
+  - affiliation: Department of Breast Surgery, The First Affiliated Hospital of Soochow
+      University, 188 Shizi Street, 215006, Suzhou, China.
+    firstname: Jianxia
+    initials: J
+    lastname: Liu
+  - affiliation: Department of Breast Surgery, Affiliated Hospital of Jiangnan University,
+      1000 Hefeng Road, 214000, Wuxi, China.
+    firstname: Dong
+    initials: D
+    lastname: Meng
+  - affiliation: Department of Breast Surgery, The Second People's Hospital of Lianyungang,
+      41 Hailian East Road, 222006, Lianyungang, China.
+    firstname: Hua
+    initials: H
+    lastname: Shao
+  - affiliation: Department of Breast Surgery, Affiliated Suqian Hospital of Xuzhou
+      Medical University, 138 Huanghe South Road, 223800, Suqian, China.
+    firstname: Xiangxin
+    initials: X
+    lastname: Zheng
+  - affiliation: The Affiliated Lianyungang Hospital of Xuzhou Medical University,
+      6 Zhenhua East Road, 222006, Lianyungang, China.
+    firstname: Shuqin
+    initials: S
+    lastname: Li
+  - affiliation: Liyang People's Hospital, 70 Jianshe West Road, 213300, Liyang, China.
+    firstname: Hua
+    initials: H
+    lastname: Pan
+  - affiliation: The Affiliated Hospital of Nantong University, 20 Xisi Road, 226300,
+      Nantong, China.
+    firstname: Jing
+    initials: J
+    lastname: Ke
+  - affiliation: Department of Breast Surgery, The Third Affiliated Hospital of Soochow
+      University, 185 Juqian Street, 213000, Changzhou, China.
+    firstname: Wenying
+    initials: W
+    lastname: Jiang
+  - affiliation: Department of Breast Surgery, The Affiliated Changzhou Second People's
+      Hospital of Nanjing Medical University, 29 Xinglong Lane, 213000, Changzhou,
+      China.
+    firstname: Xiaolan
+    initials: X
+    lastname: Zhang
+  - affiliation: Department of Breast and Thyroid Surgery, Huai'an First People's
+      Hospital, Nanjing Medical University, 1 Huanghe West Road, 223300, Huai'an,
+      China.
+    firstname: Xuedong
+    initials: X
+    lastname: Han
+  - affiliation: Department of General Surgery, the First People's Hospital of Yancheng,
+      66 Renmin South Road, 224001, Yancheng, China.
+    firstname: Jian
+    initials: J
+    lastname: Chu
+  - affiliation: Department of General Surgery, the First People's Hospital of Yancheng,
+      66 Renmin South Road, 224001, Yancheng, China.
+    firstname: Hongyin
+    initials: H
+    lastname: An
+  - affiliation: Department of Pathology, The Second People's Hospital of Lianyungang,
+      41 Hailian East Road, 222006, Lianyungang, China.
+    firstname: Juyan
+    initials: J
+    lastname: Ge
+  - affiliation: Department of Breast Surgery, the Second Affiliated Hospital, Zhejiang
+      University, College of Medicine, 88 Jiefang Road, 310009, Hangzhou, China.
+    firstname: Chi
+    initials: C
+    lastname: Pan
+  - affiliation: |-
+      National Health Commission Key Laboratory of Antibody Techniques, Department of Cell Biology, Jiangsu Provincial Key Laboratory of Human Functional Genomics, School of Basic Medical Sciences, Nanjing Medical University, 211166, Nanjing, Jiangsu, China.
+      Institute for Brain Tumors, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Collaborative Innovation Center for Personalized Cancer Medicine, Nanjing Medical University, Nanjing, Jiangsu, China.
+      Department of Medicine, Division of Regenerative Medicine, University of California, San Diego, La Jolla, CA, USA.
+    firstname: Xiuxing
+    initials: X
+    lastname: Wang
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China. likening@njmu.edu.cn.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China. likening@njmu.edu.cn.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China. likening@njmu.edu.cn.
+    firstname: Kening
+    initials: K
+    lastname: Li
+  - affiliation: |-
+      Department of Bioinformatics, Nanjing Medical University, 101 Longmian Avenue, 211166, Nanjing, China. wangqh@njmu.edu.cn.
+      Collaborative Innovation Center for Personalized Cancer Medicine, Jiangsu Key Lab of Cancer Biomarkers, Prevention and Treatment, Nanjing Medical University, 211166, Nanjing, Jiangsu, China. wangqh@njmu.edu.cn.
+      The Affiliated Cancer Hospital of Nanjing Medical University, Jiangsu Cancer Hospital, Jiangsu Institute of Cancer Research, 210002, Nanjing, China. wangqh@njmu.edu.cn.
+      Biomedical Big Data Center, Nanjing Medical University, 211166, Nanjing, Jiangsu, China. wangqh@njmu.edu.cn.
+    firstname: Qianghu
+    initials: Q
+    lastname: Wang
+  - affiliation: Jiangsu Breast Disease Center, The First Affiliated Hospital with
+      Nanjing Medical University, 300 Guangzhou Road, 210029, Nanjing, China. dingqiang@njmu.edu.cn.
+    firstname: Qiang
+    initials: Q
+    lastname: Ding
+  doi: 10.1038/s41467-023-41318-2
+  journal: nature communications
+  keywords: []
+  n_citation: 1.0
+  n_citation_rank: 16.5
+  publication_date: '2023-09-12'
+  title: Single-cell transcriptome analysis indicates fatty acid metabolism-mediated
+    metastasis and immunosuppression in male breast cancer.
+  if_rank: 227
+- abstract: Single-cell genomics technologies are ushering in a new research era.
+    In this review, we summarize the benefits and current challenges of using these
+    technologies to probe the transcriptional regulation of plant development. In
+    addition to profiling cells at a single snapshot in time, researchers have recently
+    produced time-resolved datasets to map cell responses to stimuli. Live-imaging
+    and spatial transcriptomic techniques are rapidly being adopted to link a cell's
+    transcriptional profile with its spatial location within a tissue. Combining these
+    technologies is a powerful spatiotemporal approach to investigate cell plasticity
+    and developmental responses that contribute to plant resilience. Although there
+    are hurdles to overcome, we conclude by discussing how single-cell genomics is
+    poised to address developmental questions in the coming years.
+  altmetric_attention_score: 65.45
+  altmetric_attention_score_rank: 2.0
+  authors:
+  - affiliation: Department of Biology, Duke University, Durham, NC 27708, USA; Howard
+      Hughes Medical Institute, Duke University, Durham, NC 27708, USA.
+    firstname: Trevor M
+    initials: TM
+    lastname: Nolan
+  - affiliation: 'Department of Biology, Duke University, Durham, NC 27708, USA; Howard
+      Hughes Medical Institute, Duke University, Durham, NC 27708, USA. Electronic
+      address: rachel.shahan@duke.edu.'
+    firstname: Rachel
+    initials: R
+    lastname: Shahan
+  doi: 10.1016/j.pbi.2023.102444
+  journal: current opinion in plant biology
+  keywords: []
+  n_citation: 114.0
+  n_citation_rank: 1.0
+  publication_date: '2023-09-12'
+  title: Resolving plant development in space and time with single-cell genomics.
+  if_rank: 424
+- abstract: "Defective lymphatic drainage and translocation of B-cells in inflamed
+    (Bin) joint-draining lymph node sinuses are pathogenic phenomena in patients with
+    severe rheumatoid arthritis (RA). However, the molecular mechanisms underlying
+    this lymphatic dysfunction remain poorly understood. Herein, we utilized multi-omic
+    spatial and single-cell transcriptomics to evaluate altered cellular composition
+    (including lymphatic endothelial cells, macrophages, B-cells, and T-cells) in
+    the joint-draining lymph node sinuses and their associated phenotypic changes
+    and cell-cell interactions during RA development using the tumor necrosis factor
+    transgenic (TNF-Tg) mouse model.\nPopliteal lymph nodes (PLNs) from wild-type
+    (n=10) and TNF-Tg male mice with \"Early\" (5 to 6-months of age; n=6) and \"Advanced\"
+    (>8-months of age; n=12) arthritis were harvested and processed for spatial transcriptomics.
+    Single-cell RNA sequencing (scRNAseq) was performed in PLNs from the TNF-Tg cohorts
+    (n=6 PLNs pooled/cohort). PLN histopathology and ELISPOT along with ankle histology
+    and micro-CT were evaluated. Histopathology of human lymph nodes and synovia was
+    performed for clinical correlation.\nAdvanced PLN sinuses exhibited an increased
+    \nCollectively, these data support a model of flare in chronic TNF-induced arthritis
+    in which loss of lymphatic flow through affected joint-draining lymph nodes facilitates
+    the interaction between effluxing macrophages and T-cells via ALCAM-CD6 co-stimulation,
+    initiating IgG2b class-switching and plasma cell differentiation of the expanded
+    Bin population. Future work is warranted to investigate immunoglobulin clonality
+    and potential autoimmune consequences, as well as the efficacy of anti-CD6 therapy
+    to prevent these pathogenic events."
+  altmetric_attention_score: 4.85
+  altmetric_attention_score_rank: 8.0
+  authors:
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Pathology & Laboratory Medicine, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: H Mark
+    initials: HM
+    lastname: Kenney
+  - affiliation: Department of Medicine, Division of Allergy, Immunology, Rheumatology,
+      University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Javier
+    initials: J
+    lastname: Rangel-Moreno
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Pathology & Laboratory Medicine, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Yue
+    initials: yes
+    lastname: Peng
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Pathology & Laboratory Medicine, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Kiana L
+    initials: KL
+    lastname: Chen
+  - affiliation: |-
+      Center for Vaccine Biology and Immunology, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Microbiology and Immunology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Jennifer
+    initials: J
+    lastname: Bruno
+  - affiliation: Department of Microbiology and Immunology, University of Rochester
+      Medical Center, Rochester, NY, United States.
+    firstname: Abdul
+    initials: A
+    lastname: Embong
+  - affiliation: Genomics Research Center, University of Rochester Medical Center,
+      Rochester, NY, United States.
+    firstname: Elizabeth
+    initials: E
+    lastname: Pritchett
+  - affiliation: Center for Musculoskeletal Research, University of Rochester Medical
+      Center, Rochester, NY, United States.
+    firstname: Jeffrey I
+    initials: JI
+    lastname: Fox
+  - affiliation: Psychoimmunology Laboratory, Instituto Nacional de Psiquiatría "Ramón
+      de la Fuente Muñiz", Mexico City, Mexico.
+    firstname: Enrique
+    initials: E
+    lastname: Becerril-Villanueva
+  - affiliation: Department of Pathology, Instituto Nacional de Ciencias Médicas y
+      Nutrición Salvador Zubirán, Mexico City, Mexico.
+    firstname: Armando
+    initials: A
+    lastname: Gamboa-Domínguez
+  - affiliation: |-
+      Center for Vaccine Biology and Immunology, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Microbiology and Immunology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Sally
+    initials: S
+    lastname: Quataert
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Microbiology and Immunology, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Orthopaedics, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Gowrishankar
+    initials: G
+    lastname: Muthukrishnan
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Obstetrics and Gynecology, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Neuroscience, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Urology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Ronald W
+    initials: RW
+    lastname: Wood
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Medicine, Division of Allergy, Immunology, Rheumatology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Benjamin D
+    initials: BD
+    lastname: Korman
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Pathology & Laboratory Medicine, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Medicine, Division of Allergy, Immunology, Rheumatology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Jennifer H
+    initials: JH
+    lastname: Anolik
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Pathology & Laboratory Medicine, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Lianping
+    initials: L
+    lastname: Xing
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Medicine, Division of Allergy, Immunology, Rheumatology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Christopher T
+    initials: CT
+    lastname: Ritchlin
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Pathology & Laboratory Medicine, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Medicine, Division of Allergy, Immunology, Rheumatology, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Microbiology and Immunology, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Orthopaedics, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Urology, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Edward M
+    initials: EM
+    lastname: Schwarz
+  - affiliation: |-
+      Center for Musculoskeletal Research, University of Rochester Medical Center, Rochester, NY, United States.
+      Department of Orthopaedics, University of Rochester Medical Center, Rochester, NY, United States.
+    firstname: Chia-Lung
+    initials: CL
+    lastname: Wu
+  doi: 10.3389/fimmu.2023.1237498
+  journal: frontiers in immunology
+  keywords:
+  - B-cells
+  - arthritis
+  - lymph node
+  - lymphatics
+  - plasma cells
+  - single-cell RNA sequencing
+  - spatial transcriptomics
+  n_citation: 7.0
+  n_citation_rank: 8.5
+  publication_date: '2023-09-11'
+  title: Multi-omics analysis identifies IgG2b class-switching with ALCAM-CD6 co-stimulation
+    in joint-draining lymph nodes during advanced inflammatory-erosive arthritis.
+  if_rank: 1114
+- abstract: |-
+    Disease relapse and therapy resistance remain serious impediments to treating cancer. Leukemia stem cells (LSC) are therapy resistant and the cause of relapse. A state of deep quiescence appears to enable cancer stem cells (CSC) to acquire new somatic mutations essential for disease progression and therapy resistance. Both normal hematopoietic stem cells (HSC) and LSC share many common features, thereby complicating the safe elimination of LSC. A recent study demonstrated that long lived normal oocytes exist without mitochondrial complex I (MC-1), expressing it in a developmentally regulated fashion, thereby mitigating their vulnerability to ROS. Quiescent CSC rely on mitochondrial FAO, without complex I expression, thereby avoiding the generation of damaging ROS, similar to long lived normal human stem cells. A deeper understanding of the biology of therapy resistance is important for the development of optimal strategies to attain complete leukemia cures.
+    Here, using scRNA-sequencing and ATAC-seq on primary chronic myelogenous leukemia (CML) patient samples, combined with bioinformatics analyses, we further examine the heterogeneity of a previously characterized in vitro imatinib-selected CD34-CD38- CML LSC population. We utilized a series of functional analyses, including single-cell metabolomic and Seahorse analyses, to validate the existence of the deepest quiescent leukemia initiators (LI) subset.
+    Current study revealed heterogeneity of therapy resistant LSC in CML patients and their existence of two functionally distinct states. The most deeply quiescent LI suppress the expression of MC-1, yet are highly dependent on fatty acid oxidation (FAO) for their metabolic requirements and ATAC-seq demonstrated increased chromatin accessibility in this population, all consistent with an extremely primitive, quiescent stemness transcriptional signature. Importantly, the specific CREB binding protein (CBP)/β-catenin antagonist ICG-001 initiates the differentiation of LSC, including LI, decreases chromatin accessibility with differentiation and increasing expression of MC-1, CD34, CD38 and BCR-ABL1, thereby re-sensitizing them to imatinib.
+    We investigated the biological aspects related to LSC heterogeneity in CML patients and demonstrated the ability of specific small molecule CBP/β-catenin antagonists to safely eliminate deeply quiescent therapy resistant CSC. These observations may represent an attractive generalizable therapeutic strategy that could help develop better protocols to eradicate the quiescent LSC population.
+  altmetric_attention_score: 1.0
+  altmetric_attention_score_rank: 14.5
+  authors:
+  - affiliation: Beckman Research Institute of City of Hope Department of Cancer Biology
+      and Molecular Medicine Duarte United States.
+    firstname: Nyam-Osor
+    initials: 'NO'
+    lastname: Chimge
+  - affiliation: Beckman Research Institute of City of Hope The Integrative Genomics
+      Core Duarte United States.
+    firstname: Min-Hsuan
+    initials: MH
+    lastname: Chen
+  - affiliation: Beckman Research Institute of City of Hope Department of Cancer Biology
+      and Molecular Medicine Duarte United States.
+    firstname: Cu
+    initials: C
+    lastname: Nguyen
+  - affiliation: Beckman Research Institute of City of Hope The Integrative Genomics
+      Core Duarte United States.
+    firstname: Yuqi
+    initials: yes
+    lastname: Zhao
+  - affiliation: Beckman Research Institute of City of Hope The Integrative Genomics
+      Core Duarte United States.
+    firstname: Xiwei
+    initials: X
+    lastname: Wu
+  - affiliation: Aix-Marseille University Centre d'Immunologie de Marseille-Luminy
+      Marseille France.
+    firstname: Paulina Garcia
+    initials: PG
+    lastname: Gonzalez
+  - affiliation: Children\'s Hospital of Los Angeles Department of Pediatrics, Division
+      of Blood and Bone Marrow Transplantation Los Angeles United States.
+    firstname: Heather
+    initials: H
+    lastname: Ogana
+  - affiliation: Children\'s Hospital of Los Angeles Department of Pediatrics, Division
+      of Blood and Bone Marrow Transplantation Los Angeles United States.
+    firstname: Samantha
+    initials: S
+    lastname: Hurwitz
+  - affiliation: Beckman Research Institute of City of Hope Department of Cancer Biology
+      and Molecular Medicine Duarte United States.
+    firstname: Jia-Ling
+    initials: JL
+    lastname: Teo
+  - affiliation: Children's National Health System Center for Genetic Medicine Research
+      Washington D.C. United States.
+    firstname: Xiaolong
+    initials: X
+    lastname: Chen
+  - affiliation: Beckman Research Institute of City of Hope The Integrative Genomics
+      Core Duarte United States.
+    firstname: Juan
+    initials: J
+    lastname: Du
+  - affiliation: Medical College of Wisconsin Institute of Health Equity and MCW Cancer
+      Center Milwaukee United States.
+    firstname: Victor
+    initials: V
+    lastname: Jin
+  - affiliation: Children\'s Hospital of Los Angeles Department of Pediatrics, Division
+      of Blood and Bone Marrow Transplantation Los Angeles United States.
+    firstname: Yong-Mi
+    initials: YM
+    lastname: Kim
+  - affiliation: National Cancer Centre Department of Clinical Proteomics Tokyo Japan.
+    firstname: Masaya
+    initials: M
+    lastname: Ono
+  - affiliation: Aix-Marseille University Centre d'Immunologie de Marseille-Luminy
+      Marseille France.
+    firstname: Rafael J
+    initials: RJ
+    lastname: Argüello
+  - affiliation: Beckman Research Institute of City of Hope Department of Cancer Biology
+      and Molecular Medicine Duarte United States.
+    firstname: Michael
+    initials: M
+    lastname: Kahn
+  doi: 10.2174/1874467217666230906092236
+  journal: current molecular pharmacology
+  keywords:
+  - CBP
+  - CML
+  - ICG-00
+  - ICG-00CML
+  - LI
+  - LSC
+  - MC-1
+  - metabolism
+  n_citation: 1.0
+  n_citation_rank: 16.5
+  publication_date: '2023-09-11'
+  title: A Deeply Quiescent Subset of CML LSC Depend on FAO Yet Avoid Deleterious
+    ROS by Suppressing Mitochondrial Complex I.
+  if_rank: 2804
+- abstract: Genes act in concert with each other in specific contexts to perform their
+    functions. Determining how these genes influence complex traits requires a mechanistic
+    understanding of expression regulation across different conditions. It has been
+    shown that this insight is critical for developing new therapies. Transcriptome-wide
+    association studies have helped uncover the role of individual genes in disease-relevant
+    mechanisms. However, modern models of the architecture of complex traits predict
+    that gene-gene interactions play a crucial role in disease origin and progression.
+    Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations
+    and pharmacological perturbation data into a common latent representation for
+    a joint analysis. This representation is based on modules of genes with similar
+    expression patterns across the same conditions. We observe that diseases are significantly
+    associated with gene modules expressed in relevant cell types, and our approach
+    is accurate in predicting known drug-disease pairs and inferring mechanisms of
+    action. Furthermore, using a CRISPR screen to analyze lipid regulation, we find
+    that functionally important players lack associations but are prioritized in trait-associated
+    modules by PhenoPLIER. By incorporating groups of co-expressed genes, PhenoPLIER
+    can contextualize genetic associations and reveal potential targets missed by
+    single-gene strategies.
+  altmetric_attention_score: 12.95
+  altmetric_attention_score_rank: 6.0
+  authors:
+  - affiliation: |-
+      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+      Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA.
+    firstname: Milton
+    initials: M
+    lastname: Pividori
+  - affiliation: Center for Spatial and Functional Genomics, Children's Hospital of
+      Philadelphia, Philadelphia, PA, 19104, USA.
+    firstname: Sumei
+    initials: S
+    lastname: Lu
+  - affiliation: Department of Biomedical Data Science, Stanford University, Stanford,
+      CA, 94305, USA.
+    firstname: Binglan
+    initials: B
+    lastname: Li
+  - affiliation: Center for Spatial and Functional Genomics, Children's Hospital of
+      Philadelphia, Philadelphia, PA, 19104, USA.
+    firstname: Chun
+    initials: C
+    lastname: Su
+  - affiliation: Center for Spatial and Functional Genomics, Children's Hospital of
+      Philadelphia, Philadelphia, PA, 19104, USA.
+    firstname: Matthew E
+    initials: ME
+    lastname: Johnson
+  - affiliation: Vanderbilt University Medical Center, Nashville, TN, 37232, USA.
+    firstname: Wei-Qi
+    initials: WQ
+    lastname: Wei
+  - affiliation: Vanderbilt University Medical Center, Nashville, TN, 37232, USA.
+    firstname: Qiping
+    initials: Q
+    lastname: Feng
+  - affiliation: Cincinnati Children's Hospital Medical Center, Cincinnati, OH, 45229,
+      USA.
+    firstname: Bahram
+    initials: B
+    lastname: Namjou
+  - affiliation: Department of Medicine, Division of Nephrology, Vagelos College of
+      Physicians & Surgeons, Columbia University, New York, NY, 10032, USA.
+    firstname: Krzysztof
+    initials: K
+    lastname: Kiryluk
+  - affiliation: Mayo Clinic, Rochester, MN, 55905, USA.
+    firstname: Iftikhar J
+    initials: IJ
+    lastname: Kullo
+  - affiliation: Northwestern University, Chicago, IL, 60611, USA.
+    firstname: Yuan
+    initials: yes
+    lastname: Luo
+  - affiliation: Kahlert School of Computing, University of Utah, Salt Lake City,
+      UT, 84112, USA.
+    firstname: Blair D
+    initials: BD
+    lastname: Sullivan
+  - affiliation: |-
+      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+      Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+    firstname: Benjamin F
+    initials: BF
+    lastname: Voight
+  - affiliation: Institute for Translational Medicine and Therapeutics, Perelman School
+      of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+    firstname: Carsten
+    initials: C
+    lastname: Skarke
+  - affiliation: Department of Genetics, Perelman School of Medicine, University of
+      Pennsylvania, Philadelphia, PA, 19104, USA.
+    firstname: Marylyn D
+    initials: MD
+    lastname: Ritchie
+  - affiliation: |-
+      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA.
+      Division of Endocrinology and Diabetes, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA.
+      Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA.
+      Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+    firstname: Struan F A
+    initials: SFA
+    lastname: Grant
+  - affiliation: ~
+    firstname: ~
+    initials: ~
+    lastname: ~
+  - affiliation: |-
+      Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA. casey.s.greene@cuanschutz.edu.
+      Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA. casey.s.greene@cuanschutz.edu.
+    firstname: Casey S
+    initials: CS
+    lastname: Greene
+  doi: 10.1038/s41467-023-41057-4
+  journal: nature communications
+  keywords: []
+  n_citation: 26.0
+  n_citation_rank: 4.5
+  publication_date: '2023-09-10'
+  title: Projecting genetic associations through gene expression patterns highlights
+    disease etiology and drug mechanisms.
+  if_rank: 227
+- abstract: Breakage-fusion-bridge (BFB) is a complex rearrangement that leads to
+    tumor malignancy. Existing models for detecting BFBs rely on the ideal BFB hypothesis,
+    ruling out the possibility of BFBs entangled with other structural variations,
+    that is, complex BFBs. We propose an algorithm Ambigram to identify complex BFB
+    and reconstruct the rearranged structure of the local genome during the cancer
+    subclone evolution process. Ambigram handles data from short, linked, long, and
+    single-cell sequences, and optical mapping technologies. Ambigram successfully
+    deciphers the gold- or silver-standard complex BFBs against the state-of-the-art
+    in multiple cancers. Ambigram dissects the intratumor heterogeneity of complex
+    BFB events with single-cell reads from melanoma and gastric cancer. Furthermore,
+    applying Ambigram to liver and cervical cancer data suggests that the BFB mechanism
+    may mediate oncovirus integrations. BFB also exists in noncancer genomics. Investigating
+    the complete human genome reference with Ambigram suggests that the BFB mechanism
+    may be involved in two genome reorganizations of Homo Sapiens during evolution.
+    Moreover, Ambigram discovers the signals of recurrent foldback inversions and
+    complex BFBs in whole genome data from the 1000 genome project, and congenital
+    heart diseases, respectively.
+  altmetric_attention_score: 0.75
+  altmetric_attention_score_rank: 16.0
+  authors:
+  - affiliation: Department of Computer Science, City University of Hong Kong, Hong
+      Kong, China.
+    firstname: Chaohui
+    initials: C
+    lastname: Li
+  - affiliation: Department of Computer Science, City University of Hong Kong, Hong
+      Kong, China.
+    firstname: Lingxi
+    initials: L
+    lastname: Chen
+  - affiliation: Department of Computer Science, City University of Hong Kong, Hong
+      Kong, China.
+    firstname: Guangze
+    initials: G
+    lastname: Pan
+  - affiliation: Department of Computer Science, City University of Hong Kong, Hong
+      Kong, China.
+    firstname: Wenqian
+    initials: W
+    lastname: Zhang
+  - affiliation: Department of Computer Science, City University of Hong Kong, Hong
+      Kong, China. shuaicli@cityu.edu.hk.
+    firstname: Shuai Cheng
+    initials: SC
+    lastname: Li
+  doi: 10.1038/s41467-023-41259-w
+  journal: nature communications
+  keywords: []
+  n_citation: 3.0
+  n_citation_rank: 11.0
+  publication_date: '2023-09-09'
+  title: Deciphering complex breakage-fusion-bridge genome rearrangements with Ambigram.
+  if_rank: 227
+- abstract: 'To gain deeper insights into transcriptomes and epigenomes of organoids,
+    liver organoids from two states (expandable and more differentiated) were subjected
+    to single-cell RNA-seq (scRNA-seq) and single-cell ATAC-seq (scATAC-seq) analyses.
+    Mitochondrial gene expression was higher in differentiated than in non-differentiated
+    hepatocytes, with ATAC-seq peaks increasing near the mitochondrial control region.
+    Differentiation of liver organoids resulted in the expression of transcription
+    factors that act as enhancers and repressors. In addition, epigenetic mechanisms
+    regulating the expression of alpha-fetoprotein (AFP) and albumin (ALB) differed
+    in liver organoids and adult liver. Knockdown of PDX1, an essential transcription
+    factor for pancreas development, led to the hepatic maturation of liver organoids
+    through regulation of AFP and ALB expression. This integrative analysis of the
+    transcriptomes and epigenomes of liver organoids at the single-cell level may
+    contribute to a better understanding of the regulatory networks during liver development
+    and the further development of mature '
+  altmetric_attention_score: 4.55
+  altmetric_attention_score_rank: 9.0
+  authors:
+  - affiliation: Korean Bioinformation Center, Daejeon, Korea.
+    firstname: Jong-Hwan
+    initials: JH
+    lastname: Kim
+  - affiliation: |-
+      Stem Cell Convergence Research Center, Daejeon, Korea.
+      Department of Functional Genomics, University of Science and Technology (UST), Daejeon, Korea.
+    firstname: Seon Ju
+    initials: SJ
+    lastname: Mun
+  - affiliation: Personalized Genomic Medicine Research Center, Korea Research Institute
+      of Bioscience and Biotechnology (KRIBB), Daejeon, Korea.
+    firstname: Jeong-Hwan
+    initials: JH
+    lastname: Kim
+  - affiliation: |-
+      Stem Cell Convergence Research Center, Daejeon, Korea.
+      Department of Functional Genomics, University of Science and Technology (UST), Daejeon, Korea.
+      School of Pharmacy, Sungkyunkwan University, Suwon 16419, Republic of Korea.
+    firstname: Myung Jin
+    initials: MJ
+    lastname: Son
+  - affiliation: |-
+      Korean Bioinformation Center, Daejeon, Korea.
+      Personalized Genomic Medicine Research Center, Korea Research Institute of Bioscience and Biotechnology (KRIBB), Daejeon, Korea.
+      Department of Functional Genomics, University of Science and Technology (UST), Daejeon, Korea.
+    firstname: Seon-Young
+    initials: SY
+    lastname: Kim
+  doi: 10.1016/j.isci.2023.107675
+  journal: iscience
+  keywords:
+  - Experimental models in systems biology
+  - Integrative aspects of cell biology
+  - Molecular mechanism of gene regulation
+  - Transcriptomics
+  n_citation: 8.0
+  n_citation_rank: 7.0
+  publication_date: '2023-09-08'
+  title: Integrative analysis of single-cell RNA-seq and ATAC-seq reveals heterogeneity
+    of induced pluripotent stem cell-derived hepatic organoids.
+  if_rank: 1517
+- abstract: To produce a diverse antibody repertoire, immunoglobulin heavy-chain (Igh)
+    loci undergo large-scale alterations in structure to facilitate juxtaposition
+    and recombination of spatially separated variable (V
+  altmetric_attention_score: 35.65
+  altmetric_attention_score_rank: 4.0
+  authors:
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK.
+    firstname: Olga
+    initials: O
+    lastname: Mielczarek
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK; Immunology Programme, Babraham Institute, Babraham
+      Research Campus, Cambridge CB22 3AT, UK.
+    firstname: Carolyn H
+    initials: CH
+    lastname: Rogers
+  - affiliation: Friedrich Miescher Institute for Biomedical Research, Maulbeerstrasse
+      66, 4058 Basel, Switzerland.
+    firstname: Yinxiu
+    initials: yes
+    lastname: Zhan
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK; Immunology Programme, Babraham Institute, Babraham
+      Research Campus, Cambridge CB22 3AT, UK.
+    firstname: Louise S
+    initials: LS
+    lastname: Matheson
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK.
+    firstname: Michael J T
+    initials: MJT
+    lastname: Stubbington
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK.
+    firstname: Stefan
+    initials: S
+    lastname: Schoenfelder
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK; Immunology Programme, Babraham Institute, Babraham
+      Research Campus, Cambridge CB22 3AT, UK.
+    firstname: Daniel J
+    initials: DJ
+    lastname: Bolland
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK.
+    firstname: Biola M
+    initials: BM
+    lastname: Javierre
+  - affiliation: Bioinformatics Group, Babraham Institute, Babraham Research Campus,
+      Cambridge CB22 3AT, UK.
+    firstname: Steven W
+    initials: SW
+    lastname: Wingett
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK.
+    firstname: Csilla
+    initials: C
+    lastname: Várnai
+  - affiliation: Bioinformatics Group, Babraham Institute, Babraham Research Campus,
+      Cambridge CB22 3AT, UK.
+    firstname: Anne
+    initials: A
+    lastname: Segonds-Pichon
+  - affiliation: Flinders Health and Medical Research Institute, College of Medicine
+      and Public Health, Flinders University, Bedford Park, SA 5042, Australia.
+    firstname: Simon J
+    initials: SJ
+    lastname: Conn
+  - affiliation: Bioinformatics Group, Babraham Institute, Babraham Research Campus,
+      Cambridge CB22 3AT, UK.
+    firstname: Felix
+    initials: F
+    lastname: Krueger
+  - affiliation: Bioinformatics Group, Babraham Institute, Babraham Research Campus,
+      Cambridge CB22 3AT, UK.
+    firstname: Simon
+    initials: S
+    lastname: Andrews
+  - affiliation: Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK.
+    firstname: Peter
+    initials: P
+    lastname: Fraser
+  - affiliation: Friedrich Miescher Institute for Biomedical Research, Maulbeerstrasse
+      66, 4058 Basel, Switzerland.
+    firstname: Luca
+    initials: L
+    lastname: Giorgetti
+  - affiliation: 'Nuclear Dynamics Programme, Babraham Institute, Babraham Research
+      Campus, Cambridge CB22 3AT, UK; Immunology Programme, Babraham Institute, Babraham
+      Research Campus, Cambridge CB22 3AT, UK. Electronic address: anne.corcoran@babraham.ac.uk.'
+    firstname: Anne E
+    initials: AE
+    lastname: Corcoran
+  doi: 10.1016/j.celrep.2023.113074
+  journal: cell reports
+  keywords:
+  - 3D immunoglobulin structure
+  - 'CP: Immunology'
+  - Capture Hi-C
+  - genome organization
+  - immunoglobin locus
+  - interchromosomal
+  - polymer modeling
+  n_citation: 34.0
+  n_citation_rank: 3.0
+  publication_date: '2023-09-07'
+  title: Intra- and interchromosomal contact mapping reveals the Igh locus has extensive
+    conformational heterogeneity and interacts with B-lineage genes.
+  if_rank: 455
+- abstract: Single-cell RNA sequencing (scRNA-Seq) studies have provided critical
+    insight into the pathogenesis of severe acute respiratory syndrome coronavirus
+    2 (SARS-CoV-2), the causative agent of coronavirus disease 2019 (COVID-19). scRNA-Seq
+    library preparation methods and data processing workflows are generally designed
+    for the detection and quantification of eukaryotic host mRNAs and not viral RNAs.
+    Here, we compare different scRNA-Seq library preparation methods for their ability
+    to quantify and detect SARS-CoV-2 RNAs with a focus on subgenomic mRNAs (sgmRNAs).
+    We show that compared to 10X Genomics Chromium Next GEM Single Cell 3' (10X 3')
+    libraries or 10X Genomics Chromium Next GEM Single Cell V(D)J (10X 5') libraries
+    sequenced with standard read configurations, 10X 5' libraries sequenced with an
+    extended length read 1 (R1) that covers both cell barcode and transcript sequence
+    (termed "10X 5' with extended R1") increase the number of unambiguous reads spanning
+    leader-sgmRNA junction sites. We further present a data processing workflow, single-cell
+    coronavirus sequencing (scCoVseq), which quantifies reads unambiguously assigned
+    to viral sgmRNAs or viral genomic RNA (gRNA). We find that combining 10X 5' with
+    extended R1 library preparation/sequencing and scCoVseq data processing maximizes
+    the number of viral UMIs per cell quantified by scRNA-Seq. Corresponding sgmRNA
+    expression levels are highly correlated with expression in matched bulk RNA-Seq
+    data sets quantified with established tools for SARS-CoV-2 analysis. Using this
+    scRNA-Seq approach, we find that SARS-CoV-2 gene expression is highly correlated
+    across individual infected cells, which suggests that the proportion of viral
+    sgmRNAs remains generally consistent throughout infection. Taken together, these
+    results and corresponding data processing workflow enable robust quantification
+    of coronavirus sgmRNA expression at single-cell resolution, thereby supporting
+    high-resolution studies of viral RNA processes in individual cells. IMPORTANCE
+    Single-cell RNA sequencing (scRNA-Seq) has emerged as a valuable tool to study
+    host-virus interactions, especially for coronavirus disease 2019 (COVID-19). Here
+    we compare the performance of different scRNA-Seq library preparation methods
+    and sequencing strategies to detect SARS-CoV-2 RNAs and develop a data processing
+    workflow to quantify unambiguous sequence reads derived from SARS-CoV-2 genomic
+    RNA and subgenomic mRNAs. After establishing a workflow that maximizes the detection
+    of SARS-CoV-2 subgenomic mRNAs, we explore patterns of SARS-CoV-2 gene expression
+    across cells with variable levels of total viral RNA, assess host gene expression
+    differences between infected and bystander cells, and identify non-canonical and
+    lowly abundant SARS-CoV-2 RNAs. The sequencing and data processing strategies
+    developed here can enhance studies of coronavirus RNA biology at single-cell resolution
+    and thereby contribute to our understanding of viral pathogenesis.
+  altmetric_attention_score: 2.0
+  altmetric_attention_score_rank: 12.0
+  authors:
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Phillip
+    initials: P
+    lastname: Cohen
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Emma J
+    initials: EJ
+    lastname: DeGrace
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Oded
+    initials: O
+    lastname: Danziger
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Roosheel S
+    initials: RS
+    lastname: Patel
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Erika A
+    initials: EA
+    lastname: Barrall
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Tesia
+    initials: T
+    lastname: Bobrowski
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Thomas
+    initials: T
+    lastname: Kehrer
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Anastija
+    initials: A
+    lastname: Cupic
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Lisa
+    initials: L
+    lastname: Miorin
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Adolfo
+    initials: A
+    lastname: García-Sastre
+  - affiliation: Department of Microbiology, Icahn School of Medicine at Mount Sinai
+      , New York, New York, USA.
+    firstname: Brad R
+    initials: BR
+    lastname: Rosenberg
+  doi: 10.1128/spectrum.00776-23
+  journal: microbiology spectrum
+  keywords:
+  - coronavirus
+  - molecular methods
+  - single-cell RNA-seq
+  - transcriptomics
+  - viral pathogenesis
+  - virology
+  - virus-host interactions
+  n_citation: 2.0
+  n_citation_rank: 13.0
+  publication_date: '2023-09-07'
+  title: Unambiguous detection of SARS-CoV-2 subgenomic mRNAs with single-cell RNA
+    sequencing.
+  if_rank: 963
+- abstract: |-
+    We hypothesized that transcriptomic profiling of muscle satellite cells in peripheral artery disease (PAD) would identify damage-related pathways contributing to skeletal muscle myopathy. We identified a potential role for ferroptosis-a form of programmed lytic cell death by iron-mediated lipid peroxidation-as one such pathway. Ferroptosis promotes myopathy in ischemic cardiac muscle but has an unknown role in PAD.
+    Muscle satellite cells from donors with PAD were obtained during surgery. cDNA libraries were processed for single-cell RNA sequencing using the 10X Genomics platform. Protein expression was confirmed based on pathways inferred by transcriptomic analysis.
+    Unsupervised cluster analysis of over 25 000 cells aggregated from 8 donor samples yielded distinct cell populations grouped by a shared unique transcriptional fingerprint. Quiescent cells were diminished in ischemic muscle while myofibroblasts and apoptotic cells were prominent. Differential gene expression demonstrated a surprising increase in genes associated with iron transport and oxidative stress and a decrease in GPX4 (glutathione peroxidase 4) in ischemic PAD-derived cells. Release of the danger signal HMGB1 (high mobility group box-1) correlated with ferroptotic markers including surface transferrin receptor and were higher in ischemia. Furthermore, lipid peroxidation in muscle satellite cells was modulated by ferrostatin, a ferroptosis inhibitor. Histology confirmed iron deposition and lipofuscin, an inducer of ferroptosis in PAD-affected muscle.
+    This is the first report documenting that genes known to be involved in ferroptosis are differentially expressed in human skeletal muscle affected by PAD. Targeting ferroptosis may be a novel therapeutic strategy to reduce PAD myopathy.
+  altmetric_attention_score: 2.5
+  altmetric_attention_score_rank: 10.5
+  authors:
+  - affiliation: Department of Surgery, University of Pittsburgh Medical Center, PA
+      (L.T., B.X., E.A., R.F., R.I.M.A., U.S.).
+    firstname: Lillian
+    initials: L
+    lastname: Tran
+  - affiliation: Department of Surgery, University of Pittsburgh Medical Center, PA
+      (L.T., B.X., E.A., R.F., R.I.M.A., U.S.).
+    firstname: Bowen
+    initials: B
+    lastname: Xie
+  - affiliation: Department of Surgery, University of Pittsburgh Medical Center, PA
+      (L.T., B.X., E.A., R.F., R.I.M.A., U.S.).
+    firstname: Edwyn
+    initials: E
+    lastname: Assaf
+  - affiliation: Department of Surgery, University of Pittsburgh Medical Center, PA
+      (L.T., B.X., E.A., R.F., R.I.M.A., U.S.).
+    firstname: Ricardo
+    initials: R
+    lastname: Ferrari
+  - affiliation: University of Nebraska Medical Center Department of Surgery and the
+      VA Research Service, VA Nebraska-Western Iowa Health Care System (I.I.P., G.P.C.).
+    firstname: Iraklis I
+    initials: II
+    lastname: Pipinos
+  - affiliation: University of Nebraska Medical Center Department of Surgery and the
+      VA Research Service, VA Nebraska-Western Iowa Health Care System (I.I.P., G.P.C.).
+    firstname: George P
+    initials: GP
+    lastname: Casale
+  - affiliation: Department of Surgery, University of Pittsburgh Medical Center, PA
+      (L.T., B.X., E.A., R.F., R.I.M.A., U.S.).
+    firstname: Roberto Ivan
+    initials: RI
+    lastname: Mota Alvidrez
+  - affiliation: University of Pittsburgh Center for Biologic Imaging, PA (S.W.).
+    firstname: Simon
+    initials: S
+    lastname: Watkins
+  - affiliation: Department of Surgery, University of Pittsburgh Medical Center, PA
+      (L.T., B.X., E.A., R.F., R.I.M.A., U.S.).
+    firstname: Ulka
+    initials: U
+    lastname: Sachdev
+  doi: 10.1161/ATVBAHA.123.319518
+  journal: arteriosclerosis, thrombosis, and vascular biology
+  keywords:
+  - gene library
+  - genomics
+  - humans
+  - iron
+  - ischemia
+  n_citation: 3.0
+  n_citation_rank: 11.0
+  publication_date: '2023-09-07'
+  title: Transcriptomic Profiling Identifies Ferroptosis-Related Gene Signatures in
+    Ischemic Muscle Satellite Cells Affected by Peripheral Artery Disease.
+  if_rank: []
+- abstract: Mammalian organs exhibit distinct physiology, disease susceptibility,
+    and injury responses between the sexes. In the mouse kidney, sexually dimorphic
+    gene activity maps predominantly to proximal tubule (PT) segments. Bulk RNA sequencing
+    (RNA-seq) data demonstrated that sex differences were established from 4 and 8 weeks
+    after birth under gonadal control. Hormone injection studies and genetic removal
+    of androgen and estrogen receptors demonstrated androgen receptor (AR)-mediated
+    regulation of gene activity in PT cells as the regulatory mechanism. Interestingly,
+    caloric restriction feminizes the male kidney. Single-nuclear multiomic analysis
+    identified putative cis-regulatory regions and cooperating factors mediating PT
+    responses to AR activity in the mouse kidney. In the human kidney, a limited set
+    of genes showed conserved sex-linked regulation, whereas analysis of the mouse
+    liver underscored organ-specific differences in the regulation of sexually dimorphic
+    gene expression. These findings raise interesting questions on the evolution,
+    physiological significance, disease, and metabolic linkage of sexually dimorphic
+    gene activity.
+  altmetric_attention_score: 106.16
+  altmetric_attention_score_rank: 1.0
+  authors:
+  - affiliation: Department of Stem Cell Biology and Regenerative Medicine, Eli and
+      Edythe Broad Center for Regenerative Medicine and Stem Cell Research, Keck School
+      of Medicine of the University of Southern California, Los Angeles, CA 90089,
+      USA; Department of Quantitative and Computational Biology, University of Southern
+      California, Los Angeles, CA 90089, USA.
+    firstname: Lingyun
+    initials: L
+    lastname: Xiong
+  - affiliation: Department of Stem Cell Biology and Regenerative Medicine, Eli and
+      Edythe Broad Center for Regenerative Medicine and Stem Cell Research, Keck School
+      of Medicine of the University of Southern California, Los Angeles, CA 90089,
+      USA.
+    firstname: Jing
+    initials: J
+    lastname: Liu
+  - affiliation: Graduate Program in Genomics and Computational Biology, Biomedical
+      Graduate Studies, University of Pennsylvania, Philadelphia, PA 19104, USA.
+    firstname: Seung Yub
+    initials: SY
+    lastname: Han
+  - affiliation: Department of Stem Cell Biology and Regenerative Medicine, Eli and
+      Edythe Broad Center for Regenerative Medicine and Stem Cell Research, Keck School
+      of Medicine of the University of Southern California, Los Angeles, CA 90089,
+      USA.
+    firstname: Kari
+    initials: K
+    lastname: Koppitch
+  - affiliation: Department of Stem Cell Biology and Regenerative Medicine, Eli and
+      Edythe Broad Center for Regenerative Medicine and Stem Cell Research, Keck School
+      of Medicine of the University of Southern California, Los Angeles, CA 90089,
+      USA.
+    firstname: Jin-Jin
+    initials: JJ
+    lastname: Guo
+  - affiliation: Department of Quantitative and Computational Biology, University
+      of Southern California, Los Angeles, CA 90089, USA.
+    firstname: Megan
+    initials: M
+    lastname: Rommelfanger
+  - affiliation: Graduate Program in Genomics and Computational Biology, Biomedical
+      Graduate Studies, University of Pennsylvania, Philadelphia, PA 19104, USA.
+    firstname: Zhen
+    initials: Z
+    lastname: Miao
+  - affiliation: Caltech Bioinformatics Resource Center at Beckman Institute, California
+      Institute of Technology, Pasadena, CA 91125, USA.
+    firstname: Fan
+    initials: F
+    lastname: Gao
+  - affiliation: Division of Biology and Biological Engineering, California Institute
+      of Technology, Pasadena, CA 91125, USA.
+    firstname: Ingileif B
+    initials: IB
+    lastname: Hallgrimsdottir
+  - affiliation: Division of Biology and Biological Engineering, California Institute
+      of Technology, Pasadena, CA 91125, USA; Department of Computing and Mathematical
+      Sciences, California Institute of Technology, Pasadena, CA 91125, USA.
+    firstname: Lior
+    initials: L
+    lastname: Pachter
+  - affiliation: Department of Biology, University of Pennsylvania, Philadelphia,
+      PA 19104, USA.
+    firstname: Junhyong
+    initials: J
+    lastname: Kim
+  - affiliation: Department of Quantitative and Computational Biology, University
+      of Southern California, Los Angeles, CA 90089, USA.
+    firstname: Adam L
+    initials: AL
+    lastname: MacLean
+  - affiliation: 'Department of Stem Cell Biology and Regenerative Medicine, Eli and
+      Edythe Broad Center for Regenerative Medicine and Stem Cell Research, Keck School
+      of Medicine of the University of Southern California, Los Angeles, CA 90089,
+      USA. Electronic address: amcmahon@med.usc.edu.'
+    firstname: Andrew P
+    initials: AP
+    lastname: McMahon
+  doi: 10.1016/j.devcel.2023.08.010
+  journal: developmental cell
+  keywords:
+  - androgen receptor regulation
+  - kidney
+  - multiomic
+  - proximal tubule
+  - sexual dimorphism
+  - single nuclear
+  n_citation: 26.0
+  n_citation_rank: 4.5
+  publication_date: '2023-09-07'
+  title: Direct androgen receptor control of sexually dimorphic gene expression in
+    the mammalian kidney.
+  if_rank: 311
+
