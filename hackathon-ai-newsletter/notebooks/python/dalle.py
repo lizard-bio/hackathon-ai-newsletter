@@ -92,7 +92,7 @@ def main(argv):
 	print('\nGenerating DALL-E prompt...')
 	dalle_prompt = build_dalle_prompt(text)
 	print(f'Prompt:\n{dalle_prompt}')
-	print('\nGenerating DALL-E images...')
+	print('\nGenerating DALL-E image...')
 	image_url = generate_image(dalle_prompt)
 	if image_url:
 		save_image_from_url(image_url, output_file)
