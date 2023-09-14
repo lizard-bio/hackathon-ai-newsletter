@@ -86,17 +86,18 @@ def main(argv):
 	# that DALL-E prompts are capped at somewhere between 50 to 70 
 	# words (there is some ambiguity on how they count words or 
 	# tokens).
-	print('Reading the summaries...')
+	print('\nReading the summaries...')
 	text = read_summary(summary_file)
-	print('Generating DALL-E prompt...')
+	print('\nGenerating DALL-E prompt...')
 	dalle_prompt = build_dalle_prompt(text)
-	print('Generating DALL-E images...')
+	print(f'Prompt:\n{dalle_prompt}')
+	print('\nGenerating DALL-E images...')
 	image_url = generate_image(dalle_prompt)
 	if image_url:
 		save_image_from_url(image_url, output_file)
-		print(f'Your image is ready 🥳 and stored here: {output_file}')
+		print(f'\nYour image is ready 🥳 and stored here: {output_file}')
 	else:
-		print('Could not generate a DALL-E image 💀')
+		print('\nCould not generate a DALL-E image 💀')
 
 
 def read_summary(file):
