@@ -71,7 +71,7 @@ def main(argv):
 		print('Input argument error')
 		quit()
 	for opt, arg in opts:
-		elif opt in ('-s', '--summary'):
+		if opt in ('-s', '--summary'):
 			summary_file = arg
 		elif opt in ('-o', '--output'):
 			output_file = arg
