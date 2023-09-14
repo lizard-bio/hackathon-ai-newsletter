@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 
-"""Generate an image to accompany the literature summaries
+"""Generate an image to accompany the literature summary
 ---
 
-This script reads in one or more publication summaries and generates a 
-DALL-E image for each summary. The prompt for DALL-E is designed by 
+This script reads in the ChatGPT publication summary and generates an 
+accompanying DALL-E image. The prompt for DALL-E is designed by 
 ChatGPT based on the summary and some additional keywords.
 
 Usage:
 python dalle.py \
 	-s | --summary: path to the text file with the publication 
-					summaries for which the images need to be 
+					summary for which the images need to be 
 					generated. This text needs to be included into the 
 					prompt for DALL-E.
 	-o | --output: file where the generated image is stored
@@ -86,7 +86,7 @@ def main(argv):
 	# that DALL-E prompts are capped at somewhere between 50 to 70 
 	# words (there is some ambiguity on how they count words or 
 	# tokens).
-	print('\nReading the summaries...')
+	print('\nReading the summary...')
 	text = read_summary(summary_file)
 	print('\nGenerating DALL-E prompt...')
 	dalle_prompt = build_dalle_prompt(text)
