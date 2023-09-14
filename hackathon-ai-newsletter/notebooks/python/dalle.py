@@ -55,7 +55,7 @@ def generate_image(prompt):
 			size='1024x1024'
 		)
 		image_url = response['data'][0]['url']
-		return url
+		return image_url
 	except openai.error.OpenAIError as e:
 		print(e.http_status)
 		print(e.error)
