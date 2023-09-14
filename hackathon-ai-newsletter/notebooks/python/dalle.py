@@ -35,12 +35,15 @@ def build_dalle_prompt(text):
 			{'role': 'system', 'content': 'Your job is to take some scientific text and generate a \
 				prompt for DALL-E to create a captivating image to accompany the text.'},
 			{'role': 'user', 'content': f"""
-				Below is the summary of a scientific publication, enclosed by triple backticks.
+				Below is a combined summary of several scientific publications, enclosed by triple backticks.
 				Based on this summary, create a prompt for DALL-E so that it can generate a beautiful and 
-				captivating image to visually represent the summary. This prompt cannot be longer than 50 words.
-				It also has to be simple, descriptive, and specific.
-				At the end of the prompt, include the words "captivating", "scientific", "nature", 
-				"publication-ready", and "science".
+				captivating image to visually represent the summary.
+				
+				This is a list of rules you must follow when creating the prompt:
+				- the prompt cannot be longer than 50 words
+				- the prompt must be simple, descriptive, and specific
+				- the prompt must include the words "captivating", "scientific", "nature", 
+				"publication-ready", and "science"
 
 				```{text}```
 				"""}
