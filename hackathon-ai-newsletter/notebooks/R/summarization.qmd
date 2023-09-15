@@ -30,7 +30,7 @@ library(tidyverse)
 library(here)
 library(yaml)
 
-key = "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"
+key = ""
 ```
 
 # README
