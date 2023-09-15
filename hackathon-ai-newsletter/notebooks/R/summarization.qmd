@@ -1,0 +1,836 @@
+---
+title: ""
+format:
+  html:
+    toc: true 
+    toc-depth: 5
+    code-fold: true
+    standalone: true
+    embed-resources: true
+    column: page
+    df-print: kable
+execute: 
+  message: FALSE
+  warning: FALSE
+---
+
+
+
+```{r}
+#| label: setup
+#| include: false
+## This are extra settings for notebook generation
+knitr::opts_chunk$set(
+  cache = TRUE, autodep = TRUE
+)
+
+
+library(openai)
+library(tidyverse)
+library(here)
+library(yaml)
+
+key = "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"
+```
+
+# README
+These files contains various draft versions of the summarisation algoritm.
+Please go the the last version (try 7) to see the last version
+
+# Notes
+
+Mockupdata are all articles from:
+https://pubmed.ncbi.nlm.nih.gov/?term=spatial+single+cell&filter=simsearch1.fha&filter=dates.2023%2F9%2F6-2023%2F9%2F13&sort=date
+
+saved all 39 results to a text file with abstract
+
+openai API doc
+https://platform.openai.com/docs/api-reference/chat/create
+temperature
+number or null
+Optional
+Defaults to 1
+
+What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+
+We generally recommend altering this or top_p but not both.
+top_p
+number or null
+Optional
+Defaults to 1
+
+An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.
+
+We generally recommend altering this or temperature but not both.
+
+
+
+## notes about chatgtp
+max input tokens are 4097
+
+lessons learnt:
+Add simple check to guard against mistakes
+
+Do not set temperature to low. It keeps repeating the same mistake.
+
+
+# generate mock data from text
+```{r}
+#| label: mockup-data
+
+input = read_file(here("hackathon-ai-newsletter","data","raw","mock_abstracts_for_summary","abstract-spatialsin-set.txt"))
+
+
+
+data = tibble(raw = input |> str_remove("^1. ") |> str_split_1("\n[0-9]+\\. "))
+
+
+data = data |>
+  mutate(reference = str_split_i(raw,"\r\n\r\n",1)
+               , title = str_split_i(raw,"\r\n\r\n",2)
+               , abstract = str_split_i(raw,"\r\n\r\n",5))
+
+```
+
+# generate mock data from yaml
+
+
+```{r}
+#| label: mockup-data
+
+
+input_path = here("hackathon-ai-newsletter","data","raw","mock_abstracts_for_summary","pubmed-sc-genomics-7days_rank.yaml")
+
+## data = yaml.load_file(input_path)
+## data[[1]]
+
+## map_dfr(data, function(x) x |> map(list) |> as_tibble()) |> mutate()dat
+data = yaml.load_file(input_path) |>
+  map_dfr(~tibble(abstract = .x$abstract
+               , title = .x$title
+                , keywords = list(.x$keywords)
+                 , rank = unlist(.x$if_rank))) |>
+  filter(!is.na(abstract)) |>
+  arrange(rank)
+
+```
+
+# summarizer
+## iterative summarization
+
+
+### try 1
+
+```{r}
+#| label: sum
+
+## context = "This is the abstract of a scientific paper. Summarise this abstract in a clear but concise way without removing any information.:"
+## input  =  as.yaml(data)
+## data$abstract |> yaml.
+  
+
+
+summary_init = str_glue("{data$abstract[[1]]} [1]") 
+
+
+context = "Provided below is a summary from several scientific articles that are related to eachother. References to each article are provided in the format [NUMBER] (for example: [1], [2], [3], ...). Add information from a new abstract (provided also below) to this summary while keeping the existing information in the summary. The information in the summary is more important then the information in the new abstract and should be fully retained in the new summary! The reference of the paper of this new abstract is [2]. Every time information from this new abstract is used in the summary use the reference [2]. Output only the new summary augmented with the information from the new abstract. Keep all references to the corresponding information in the summary."
+
+prompt = str_glue("{context}\nsummary:\n{summary_init}\nabstract:\n{data$abstract[[2]]}")
+
+
+
+
+
+response = create_chat_completion(
+  model="gpt-3.5-turbo",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt
+  )),
+  ## temperature=.11,
+  max_tokens=1000,
+  top_p=.1,
+  frequency_penalty=0,
+  presence_penalty=0,
+  openai_api_key = key
+)
+
+
+response$choices$message.content
+
+```
+
+### try 2
+
+
+```{r}
+#| label: sum
+
+## context = "This is the abstract of a scientific paper. Summarise this abstract in a clear but concise way without removing any information.:"
+## input  =  as.yaml(data)
+## data$abstract |> yaml.
+  
+## Add information from a new abstract (provided also below) to this summary while keeping the existing information in the summary. The information in the summary is more important then the information in the new abstract and should be fully retained in the new summary!  Every time information from this new abstract is used in the summary use the reference [2]. Be very liberal with adding references. Output only the new summary augmented with the information from the new abstract. Keep all references to the corresponding information in the summary.
+
+## summary_init = str_glue("{data$abstract[[1]]} [1]") 
+
+
+## context = "Provided below is a previous summary from several scientific articles and an abstract from a new paper. References to each article mentioned in the previous summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throught the text. Create a new summary by adding the scientific findings from the abstract to the previous summary. Add the papers id's [ID] inline each time a scientific finding from the paper corresponding to the id is mentioned in the new summary. Each piece of information in the summary should be followed by an id from the paper corresponding to the id. Do not remove scientific findings discussed in the previous summary. Write the new summary in the style of a review paper. Only use the information mentioned in the previous paper and new abstract. Do not add new information."
+
+
+
+data = mutate(data, input = str_glue("{title} {abstract}"))
+
+
+
+
+
+ ## Make the new summary in the style of a review paper.
+## You are an expert in your scientific field and you are writing a review paper for your peers. 
+create_summary = function(summary, abstract){
+context = "Provided below is a previous summary from several scientific articles and an abstract from a new paper. References to each article mentioned in the previous summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throught the text. Create a new summary by adding the scientific findings from the abstract to the previous summary. Add the papers id's [ID] inline each time a scientific finding from the paper corresponding to the id is mentioned in the new summary. Each piece of information in the summary should be followed by an id from the paper corresponding to the id. Keep all scientific findings discussend in the previous summary in the new summary! Only use the information mentioned in the previous summary and new abstract to generate the new summary!"
+
+prompt = str_glue("{context}\nprevious summary from papers [1]:\n{summary}\nabstract from new paper [2]:\n{abstract}")
+
+response = create_chat_completion(
+  model="gpt-3.5-turbo",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt
+  )),
+  ## temperature=.1,
+  max_tokens=1300,
+  top_p=.1,
+  frequency_penalty=0,
+  presence_penalty=0,
+  openai_api_key = key
+)
+
+response$choices$message.content
+}
+
+res = slice(data,1:5) |> mutate(summary = accumulate(input,create_summary))
+
+res$summary |> last()
+res$abstract
+
+
+```
+
+Previous research [1] has focused on the direct measurement of engineered cancer mutations and their transcriptional phenotypes in single cells. The study developed a high-throughput, multiplexed single-cell technology called TISCC-seq to engineer and analyze predesignated mutations in cells. By integrating long-read sequencing of the target gene's transcript and short-read sequencing of the transcriptome profile, the study determined the genotype and expression phenotype of the mutations at single-cell resolution. Using this approach, the impact of over 100 TP53 mutations on gene expression was evaluated, and the mutations were classified based on their functionally significant phenotype.
+
+In a new study [2], researchers investigated the functional guilds of bacteria associated with the diatom Phaeodactylum tricornutum. The researchers used single-cell isotope tracing and nanoSIMS to quantify bacterial incorporation of algal-derived complex dissolved organic carbon and nitrogen, as well as algal incorporation of remineralized carbon and nitrogen. The results revealed strain-to-strain and cell-to-cell variability in net carbon and nitrogen incorporation, highlighting non-ubiquitous complex organic nitrogen utilization and remineralization. Based on these findings, the researchers identified three distinct functional guilds of metabolic interactions: macromolecule remineralizers, macromolecule users, and small-molecule users. These guilds were not linked to phylogeny and could not be predicted solely based on metabolic capacity as determined by comparative genomics. The study emphasizes the importance of direct activity-based measurements in ecological studies of microbial metabolic interactions.
+
+In another new paper [2], a single-cell transcriptome atlas of the West African lungfish (Protopterus annectens) was reported. This species exhibits extreme terrestrialization, a life history strategy to survive dry periods characterized by dormancy and reversible adaptive changes of the gills and lungs. The atlas highlights the cell type diversity of the West African lungfish, including gene expression consistent with phenotype changes of terrestrialization. Comparison with terrestrial tetrapods and ray-finned fishes reveals broad homology between the swim bladder and lung cell types as well as shared and idiosyncratic changes of the external gills of the West African lungfish and the internal gills of Atlantic salmon. The single-cell atlas presented in the paper provides a valuable resource for further exploration of the respiratory system evolution in vertebrates and the diversity of lungfish terrestrialization.
+
+In the new paper [2], the researchers performed transcriptomic analysis for 111,038 single cells from tumor tissues of six male breast cancer (MBC) and thirteen female breast cancer (FBC) patients. They found that MBC has significantly lower infiltration of T cells relative to FBC. Metastasis-related programs are more active in cancer cells from MBC. The activated fatty acid metabolism involved with FASN is related to cancer cell metastasis and low immune infiltration of MBC. T cells in MBC show activation of p38 MAPK and lipid oxidation pathways, indicating a dysfunctional state. In contrast, T cells in FBC exhibit higher expression of cytotoxic markers and immune activation pathways mediated by immune-modulatory cytokines. Moreover, the researchers identified the inhibitory interactions between cancer cells and T cells in MBC. This study provides important information for understanding the tumor immunology and metabolism of MBC.
+
+The abstract from the new paper [2] introduces PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis. This representation is based on modules of genes with similar expression patterns across the same conditions. The approach is accurate in predicting known drug-disease pairs and inferring mechanisms of action. By incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies.
+
+
+
+### try 3
+
+
+```{r}
+#| label: sum
+
+## context = "This is the abstract of a scientific paper. Summarise this abstract in a clear but concise way without removing any information.:"
+## input  =  as.yaml(data)
+## data$abstract |> yaml.
+  
+## Add information from a new abstract (provided also below) to this summary while keeping the existing information in the summary. The information in the summary is more important then the information in the new abstract and should be fully retained in the new summary!  Every time information from this new abstract is used in the summary use the reference [2]. Be very liberal with adding references. Output only the new summary augmented with the information from the new abstract. Keep all references to the corresponding information in the summary.
+
+## summary_init = str_glue("{data$abstract[[1]]} [1]") 
+
+
+## context = "Provided below is a previous summary from several scientific articles and an abstract from a new paper. References to each article mentioned in the previous summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throught the text. Create a new summary by adding the scientific findings from the abstract to the previous summary. Add the papers id's [ID] inline each time a scientific finding from the paper corresponding to the id is mentioned in the new summary. Each piece of information in the summary should be followed by an id from the paper corresponding to the id. Do not remove scientific findings discussed in the previous summary. Write the new summary in the style of a review paper. Only use the information mentioned in the previous paper and new abstract. Do not add new information."
+
+
+
+data = mutate(data, input = str_glue("{title} {abstract}")) |>
+  mutate(id = row_number())
+
+
+
+
+
+ ## Make the new summary in the style of a review paper.
+## You are an expert in your scientific field and you are writing a review paper for your peers. 
+## create_summary = function(summary, abstract){
+##   print(summar)
+## context = "Provided below is a summary from several scientific articles and an abstract from another article. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Augment this summary by adding the scientific findings in the abstract. Add the papers id's [ID] everywhere a scientific finding from that paper is mentioned in the summary. Each piece of information in the summary should be followed by the relevant id. Do not remove scientific findings from the summary in the augemented summary! Only use the information mentioned in the summary and abstract to generate the augmented summary!"
+
+## prompt = str_glue("{context}\nsummary:\n{summary}\nabstract from paper with id [{id}]:\n{abstract}")
+
+## response = create_chat_completion(
+##   model="gpt-3.5-turbo",
+##   messages=list(list(
+##       "role" = "user",
+##       "content" = prompt
+##   )),
+##   ## temperature=.1,
+##   max_tokens=1300,
+##   top_p=.1,
+##   frequency_penalty=0,
+##   presence_penalty=0,
+##   openai_api_key = key
+## )
+
+## print(prompt)
+## response$choices$message.content
+## }
+
+res = slice(data,1:5) |> mutate(summary = accumulate2(cur_data(),create_summary))
+
+res$summary |> first()
+res$abstract
+
+
+
+summary = str_glue("{ data$input[[1]]} [1]")
+
+## data$openai = NA
+data = mutate(data, summary = "")
+
+for (i in 2:10){
+abstract = data$abstract[i]
+context = "Provided below is a summary from several scientific articles and an abstract from another article. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Augment this summary by adding the scientific findings in the abstract. Add the papers id's [ID] everywhere a scientific finding from that paper is mentioned in the summary. Each piece of information in the summary should be followed by the relevant id. Do not remove scientific findings from the summary in the augemented summary! Only use the information mentioned in the summary and abstract to generate the augmented summary!"
+
+prompt = str_glue("{context}\nsummary:\n{summary}\nabstract from paper with id [{i}]:\n{abstract}")
+
+response = create_chat_completion(
+  model="gpt-3.5-turbo",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt
+  )),
+  ## temperature=.1,
+  max_tokens=4097,
+  top_p=.1,
+  frequency_penalty=0,
+  presence_penalty=0,
+  openai_api_key = key
+)
+
+summary = response$choices$message.content
+print(i)
+print(summary)
+## data$openai[i] = response  
+data$summary[i] = summary  
+}
+
+data
+write_rds(data, here("hackathon-ai-newsletter","data","processed","final_14092023.rds"))
+```
+
+[1] "(D) and diversity (D) gene segments with a joining (J) gene segment. In this study, we used single-cell RNA sequencing to investigate the transcriptional dynamics of Igh loci during B cell development in mice. We found that the Igh loci undergo dynamic changes in chromatin accessibility and transcriptional activity at different stages of B cell development. Specifically, we observed a progressive increase in chromatin accessibility and transcriptional activity at the D-J junction during the transition from pro-B cells to pre-B cells. This increase in activity was accompanied by the recruitment of transcription factors and chromatin remodeling complexes to the D-J junction. Our findings provide insights into the regulation of Igh locus recombination and the generation of a diverse antibody repertoire in B cells [10].\n\nAugmented summary:\nThe abstract from paper [9] discusses the benefits and challenges of using single-cell genomics technologies to study the transcriptional regulation of plant development. These technologies allow researchers to profile cells at a single snapshot in time and to produce time-resolved datasets to map cell responses to stimuli. Live-imaging and spatial transcriptomic techniques are also being used to link a cell's transcriptional profile with its spatial location within a tissue. By combining these technologies, researchers can investigate cell plasticity and developmental responses that contribute to plant resilience. Despite the hurdles that need to be overcome, single-cell genomics is expected to play a significant role in addressing developmental questions in the future [9].\n\nPaper [7] used single-cell RNA sequencing to analyze gene expression in humans and chimpanzees. The researchers collected transcriptomic data from over 70 cell types and identified hundreds of genes with conserved regulation across cell types. They also found genes that likely evolve under directional selection in specific cell types. By analyzing a human-chimpanzee fused cell line, the researchers inferred the proportion of inter-species regulatory differences due to changes in cis and trans elements. They identified dozens of transcription factors that contribute to expression differences between humans and chimpanzees in hundreds of target genes. This study provides a comprehensive dataset of comparative gene expression and sheds light on the regulatory mechanisms associated with inter-species differences [7].\n\nPaper [8] focused on sexually dimorphic gene activity in mammalian organs, particularly in the mouse kidney. The researchers found that sex differences in gene activity in the mouse kidney were established from 4 and 8 weeks after birth under gonadal control. They also discovered that androgen receptor (AR)-mediated regulation of gene activity in proximal tubule (PT) cells is the regulatory mechanism. Caloric restriction was found to feminize the male kidney. The researchers identified putative cis-regulatory regions and cooperating factors mediating PT responses to AR activity in the mouse kidney using single-nuclear multiomic analysis. In the human kidney, only a limited set of genes showed conserved sex-linked regulation. The study also highlighted organ-specific differences in the regulation of sexually dimorphic gene expression in the mouse liver. These findings raise questions about the evolution, physiological significance, disease, and metabolic linkage of sexually dimorphic gene activity [8].\n\nThe abstract from paper [10] focuses on the transcriptional dynamics of immunoglobulin heavy-chain (Igh) loci during B cell development in mice. The researchers used single-cell RNA sequencing to investigate the changes in chromatin accessibility and transcriptional activity at different stages of B cell development. They observed a progressive increase in chromatin accessibility and transcriptional activity at the D-J junction during the transition from pro-B cells to pre-B cells. This increase in activity was accompanied by the recruitment of transcription factors and chromatin remodeling complexes to the D-J junction. These findings provide insights into the regulation of Igh locus recombination and the generation of a diverse antibody repertoire in B cells [10]."
+
+### try 4
+
+
+```{r}
+#| label: mockup-data
+
+input_path = here("hackathon-ai-newsletter","data","raw","mock_abstracts_for_summary","filtered-sc-genomics-7days_altmetrics_if_rank.yaml")
+
+data = yaml.load_file(input_path) |>
+  map_dfr(~tibble(abstract = .x$abstract
+               , title = .x$title
+                , keywords = list(.x$keywords)
+                 , rank1 = unlist(.x$if_rank)
+                 ,rank2 = unlist(.x$n_citation_rank)
+                 ,citations = unlist(.x$n_citation)
+                 )
+          ) |>
+  filter(!is.na(abstract)) |>
+  mutate(rank1_normalized = rank(rank1),
+         rank2_normalized = rank(rank2),
+         rank_aggregated = rank(rank1_normalized + rank2_normalized,ties = "random")) |>
+  arrange(rank_aggregated) |>
+  mutate(id = row_number())
+
+
+datan = yaml.load_file(input_path) |>
+  map_dfr(~tibble(abstract = .x$abstract
+               , title = .x$title
+                , keywords = list(.x$keywords)
+                 , rank1 = unlist(.x$if_rank)
+                 ,rank2 = unlist(.x$n_citation_rank)
+                 ,citations = unlist(.x$n_citation)
+                 ,doi = .x$doi
+                 )
+          ) |>
+  filter(!is.na(abstract)) |>
+  mutate(rank1_normalized = rank(rank1),
+         rank2_normalized = rank(rank2),
+         rank_aggregated = rank(rank1_normalized + rank2_normalized,ties = "random")) |>
+  arrange(rank_aggregated) |>
+  mutate(id = row_number())
+
+
+ref = datan |> transmute(id,  ref = str_glue("[{id}] {title};doi: {doi} ")) |> filter(id <12)
+
+print
+message(paste(ref$ref, collapse = "\n"))
+show
+
+datan$r
+```
+
+```{r}
+#| label: sum
+
+data = mutate(data, input = str_glue("{title} {abstract}")) |>
+  mutate(id = row_number())
+
+res = slice(data,1:5) |> mutate(summary = accumulate2(cur_data(),create_summary))
+
+res$summary |> first()
+res$abstract
+
+
+
+summary = str_glue("{data$title[1]} {data$abstract[1]} [1]")
+
+data = mutate(data, summary = ""
+              ,prompt = NA
+              ,openai_response = NA)
+
+summary = ""
+n = nrow(data)
+for (i in 1:n){
+context = "Provided below is a summary from several scientific articles and an abstract from another article. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Augment this summary by adding the scientific findings in the abstract. Add the article id's [ID] everywhere a scientific finding from that article is mentioned in the summary. Each piece of information in the summary should be followed by the relevant id. Do not remove scientific findings from the summary in the augemented summary! Only use information mentioned in the summary and abstract to generate the augmented summary in a structured and concise manner."
+
+prompt = str_glue("{context}\nsummary:\n{summary}\nabstract from article with id [{i}]:\n{data$title[i]} {data$abstract[i]}")
+
+response = create_chat_completion(
+  model="gpt-3.5-turbo-16k",
+  ## model="gpt-4",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt
+  )),
+  ## temperature=.1,
+  max_tokens=13000,
+  top_p=.1,
+  frequency_penalty=0,
+  presence_penalty=0,
+  openai_api_key = key
+)
+
+summary = response$choices$message.content
+print(str_glue("{i}\n{summary}"))
+data$openai_response[i] = list(response)  
+data$summary[i] = summary  
+data$prompt[i] = prompt
+}
+
+data
+dataold = data
+
+```
+### gpt4 vs gpt3.5turbo
+#### gpt3.4turbo summary of first 3 paper
+
+PhenoPLIER is a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis. This approach is based on modules of genes with similar expression patterns across the same conditions. Diseases are significantly associated with gene modules expressed in relevant cell types, and PhenoPLIER is accurate in predicting known drug-disease pairs and inferring mechanisms of action. PhenoPLIER can contextualize genetic associations by incorporating groups of co-expressed genes and reveal potential targets missed by single-gene strategies. In a CRISPR screen analyzing lipid regulation, PhenoPLIER prioritized functionally important players in trait-associated modules, even if they lacked individual associations. This highlights the importance of gene-gene interactions in disease origin and progression. Transcriptome-wide association studies have helped uncover the role of individual genes in disease-relevant mechanisms, but modern models predict that gene-gene interactions play a crucial role in complex traits. Understanding expression regulation across different conditions is critical for developing new therapies.
+
+Single-cell genomics technologies have the potential to revolutionize research in plant development by allowing researchers to resolve plant development in space and time. These technologies offer benefits such as the ability to profile cells at a single snapshot in time and to produce time-resolved datasets to map cell responses to stimuli. Additionally, live-imaging and spatial transcriptomic techniques can be used to link a cell's transcriptional profile with its spatial location within a tissue, providing a powerful spatiotemporal approach to investigate cell plasticity and developmental responses in plants. Although there are challenges to overcome, single-cell genomics is poised to address developmental questions in the coming years.
+
+The single-cell atlas of the West African lungfish respiratory system reveals evolutionary adaptations to terrestrialization. The West African lungfish, Protopterus annectens, exhibits extreme terrestrialization, characterized by dormancy and reversible adaptive changes of the gills and lungs. The single-cell transcriptome atlas highlights the cell type diversity of the West African lungfish and gene expression consistent with phenotype changes of terrestrialization. Comparison with terrestrial tetrapods and ray-finned fishes reveals homology between the swim bladder and lung cell types, as well as shared and idiosyncratic changes of the external gills of the West African lungfish and the internal gills of Atlantic salmon. This single-cell atlas provides valuable insights into the respiratory system evolution in vertebrates and the diversity of lungfish terrestrialization. [3]
+#### gpt4 summary of first 3 paper
+
+The role of genes in disease etiology and drug mechanisms can be highlighted through the projection of genetic associations via gene expression patterns [1]. Genes function in specific contexts in conjunction with each other, and understanding how they influence complex traits requires a mechanistic comprehension of expression regulation across different conditions [1]. This understanding is crucial for the development of new therapies [1]. Transcriptome-wide association studies have been instrumental in revealing the role of individual genes in disease-relevant mechanisms [1]. However, contemporary models of complex trait architecture suggest that gene-gene interactions are vital in disease origin and progression [1].
+
+A computational approach called PhenoPLIER has been introduced to map gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis [1]. This representation is based on modules of genes with similar expression patterns across the same conditions [1]. Diseases have been found to be significantly associated with gene modules expressed in relevant cell types [1]. PhenoPLIER has proven accurate in predicting known drug-disease pairs and inferring mechanisms of action [1].
+
+In addition, a CRISPR screen was used to analyze lipid regulation, revealing that functionally important players that lack associations are prioritized in trait-associated modules by PhenoPLIER [1]. This suggests that by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets that may be missed by single-gene strategies [1].
+2
+The role of genes in disease etiology and drug mechanisms can be highlighted through the projection of genetic associations via gene expression patterns [1]. Genes function in specific contexts in conjunction with each other, and understanding how they influence complex traits requires a mechanistic comprehension of expression regulation across different conditions [1]. This understanding is crucial for the development of new therapies [1]. Transcriptome-wide association studies have been instrumental in revealing the role of individual genes in disease-relevant mechanisms [1]. However, contemporary models of complex trait architecture suggest that gene-gene interactions are vital in disease origin and progression [1].
+
+A computational approach called PhenoPLIER has been introduced to map gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis [1]. This representation is based on modules of genes with similar expression patterns across the same conditions [1]. Diseases have been found to be significantly associated with gene modules expressed in relevant cell types [1]. PhenoPLIER has proven accurate in predicting known drug-disease pairs and inferring mechanisms of action [1].
+
+In addition, a CRISPR screen was used to analyze lipid regulation, revealing that functionally important players that lack associations are prioritized in trait-associated modules by PhenoPLIER [1]. This suggests that by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets that may be missed by single-gene strategies [1].
+
+Single-cell genomics technologies are ushering in a new research era, providing a powerful spatiotemporal approach to investigate cell plasticity and developmental responses that contribute to plant resilience [2]. These technologies allow for the profiling of cells at a single snapshot in time and have recently been used to produce time-resolved datasets to map cell responses to stimuli [2]. Live-imaging and spatial transcriptomic techniques are rapidly being adopted to link a cell's transcriptional profile with its spatial location within a tissue [2]. Despite some challenges, single-cell genomics is poised to address developmental questions in the coming years [2].
+3
+The role of genes in disease etiology and drug mechanisms can be highlighted through the projection of genetic associations via gene expression patterns [1]. Genes function in specific contexts in conjunction with each other, and understanding how they influence complex traits requires a mechanistic comprehension of expression regulation across different conditions [1]. This understanding is crucial for the development of new therapies [1]. Transcriptome-wide association studies have been instrumental in revealing the role of individual genes in disease-relevant mechanisms [1]. However, contemporary models of complex trait architecture suggest that gene-gene interactions are vital in disease origin and progression [1].
+
+A computational approach called PhenoPLIER has been introduced to map gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis [1]. This representation is based on modules of genes with similar expression patterns across the same conditions [1]. Diseases have been found to be significantly associated with gene modules expressed in relevant cell types [1]. PhenoPLIER has proven accurate in predicting known drug-disease pairs and inferring mechanisms of action [1].
+
+In addition, a CRISPR screen was used to analyze lipid regulation, revealing that functionally important players that lack associations are prioritized in trait-associated modules by PhenoPLIER [1]. This suggests that by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets that may be missed by single-gene strategies [1].
+
+Single-cell genomics technologies are ushering in a new research era, providing a powerful spatiotemporal approach to investigate cell plasticity and developmental responses that contribute to plant resilience [2]. These technologies allow for the profiling of cells at a single snapshot in time and have recently been used to produce time-resolved datasets to map cell responses to stimuli [2]. Live-imaging and spatial transcriptomic techniques are rapidly being adopted to link a cell's transcriptional profile with its spatial location within a tissue [2]. Despite some challenges, single-cell genomics is poised to address developmental questions in the coming years [2].
+
+In a recent study, a single-cell transcriptome atlas of the West African lungfish (Protopterus annectens) was reported, revealing evolutionary adaptations to terrestrialization [3]. This species manifests the most extreme form of terrestrialization, a life history strategy to survive dry periods that can last for years, characterized by dormancy and reversible adaptive changes of the gills and lungs [3]. The atlas highlights the cell type diversity of the West African lungfish, including gene expression consistent with phenotype changes of terrestrialization [3]. Comparison with terrestrial tetrapods and ray-finned fishes reveals broad homology between the swim bladder and lung cell types as well as shared and idiosyncratic changes of the external gills of the West African lungfish and the internal gills of Atlantic salmon [3]. This single-cell atlas provides a valuable resource for further exploration of the respiratory system evolution in vertebrates and the diversity of lungfish terrestrialization [3].
+> 
+> 
+
+
+
+
+
+### try 5
+
+
+```{r}
+#| label: mockup-data
+
+input_path = here("hackathon-ai-newsletter","data","raw","mock_abstracts_for_summary","filtered-sc-genomics-7days_altmetrics_if_rank.yaml")
+
+data = yaml.load_file(input_path) |>
+  map_dfr(~tibble(abstract = .x$abstract
+               , title = .x$title
+                , keywords = list(.x$keywords)
+                 , rank1 = unlist(.x$if_rank)
+                 ,rank2 = unlist(.x$n_citation_rank)
+                 ,citations = unlist(.x$n_citation)
+                 ,doi = .x$doi
+                 )
+          ) |>
+  filter(!is.na(abstract)) |>
+  mutate(rank1_normalized = rank(rank1),
+         rank2_normalized = rank(rank2),
+         rank_aggregated = rank(rank1_normalized + rank2_normalized,ties = "random")) |>
+  arrange(rank_aggregated) |>
+  mutate(id = row_number())
+
+
+ref = data |> transmute(id,  ref = str_glue("[{id}] {title};doi: {doi} ")) 
+message(paste(ref$ref, collapse = "\n"))
+
+```
+
+```{r}
+#| label: sum
+
+check_ids_in_summary = function(ids,summary){
+ foundids =  str_extract_all(summary,"\\[[0-9]+\\]")[[1]]|> str_remove_all("\\[|\\]") |> unique () |> as.numeric()
+ all(ids %in% foundids)
+}
+
+data = mutate(data, summary = ""
+              ,prompt = NA
+              ,openai_response = NA)
+
+
+context = "Provided below is a summary generated from several scientific articles. Also provide is the abstract from another article. Augment the summary by integrating the key scientific findings from the abstract. Extract from the abstract the scientific problem with context and the solution to that problem and include these in the summary. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Add the article id's [ID] where a scientific finding from that article is mentioned in the summary. Each piece of information in the summary should be followed by the relevant id. Do not remove scientific findings from the summary in the augemented summary! Use only the information in the summary and abstract to generate the augmented summary and write this in a structured, comprehensive and concise way. If the same information is present in multiple articles, combine this in one sentence and provide id's to these articles. Do not remove information that was allready present in the summary."
+ 
+ summary = "This is a review of the latest research in the field of spatial single cell genomics."
+
+ n = nrow(data)
+ for (i in 1:n){
+ message(str_glue("Summarise article {i}"))
+
+prompt = str_glue("{context}\nsummary:\n{summary}\nabstract from article with id [{i}]:\n{data$title[i]} {data$abstract[i]}")
+data$prompt[i] = prompt
+good_summary = FALSE
+ while(!good_summary){
+response = create_chat_completion(
+  model="gpt-3.5-turbo-16k",
+  ## model="gpt-4",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt
+  )),
+  ## temperature=.1,
+  max_tokens=13000,
+  ## top_p=.1,
+  ## frequency_penalty=0,
+  ## presence_penalty=0,
+  openai_api_key = key
+)
+
+data$openai_response[i] = list(response)  
+summary = response$choices$message.content
+message(str_glue("\n{summary}"))
+data$summary[i] = summary
+
+ good_summary = check_ids_in_summary(1:i,summary)
+
+ if (!good_summary) message("\n !!! Summary is missing ids !!!\n")
+ }
+ }
+ 
+data
+
+write_rds(data, here("hackathon-ai-newsletter","data","processed","final_15092023.rds"))
+```
+
+### try 6
+
+
+```{r}
+#| label: mockup-data
+
+input_path = here("hackathon-ai-newsletter","data","raw","mock_abstracts_for_summary","filtered-sc-genomics-7days_altmetrics_if_rank.yaml")
+
+data = yaml.load_file(input_path) |>
+  map_dfr(~tibble(abstract = .x$abstract
+               , title = .x$title
+                , keywords = list(.x$keywords)
+                 , rank1 = unlist(.x$if_rank)
+                 ,rank2 = unlist(.x$n_citation_rank)
+                 ,citations = unlist(.x$n_citation)
+                 ,doi = .x$doi
+                 )
+          ) |>
+  filter(!is.na(abstract)) |>
+  mutate(rank1_normalized = rank(rank1),
+         rank2_normalized = rank(rank2),
+         rank_aggregated = rank(rank1_normalized + rank2_normalized,ties = "random")) |>
+  arrange(rank_aggregated) |>
+  mutate(id = row_number())
+
+
+ref = data |> transmute(id,  ref = str_glue("[{id}] {title};doi: {doi} ")) 
+message(paste(ref$ref, collapse = "\n"))
+
+```
+
+```{r}
+#| label: sum
+
+check_ids_in_summary = function(ids,summary){
+ foundids =  str_extract_all(summary,"\\[[0-9]+\\]")[[1]]|> str_remove_all("\\[|\\]") |> unique () |> as.numeric()
+ all(ids %in% foundids)
+}
+
+data = mutate(data
+  ,summary = ""
+  ,prompt1 = NA
+  ,openai_response1 = NA
+  ,review= ""
+  ,prompt2 = NA
+  ,openai_response2 = NA
+ )
+
+
+context1 = "Provided below is a summary generated from several scientific articles. Also provide is the abstract from another article. Augment the summary by integrating the key scientific findings from the abstract. Extract from the abstract the scientific problem with context and the solution to that problem and include these in the summary. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Add the article id's [ID] where a scientific finding from that article is mentioned in the summary. Each piece of information in the summary should be followed by the relevant id. Do not remove scientific findings from the summary in the augemented summary! Use only the information in the summary and abstract to generate the augmented summary and write this in a structured, comprehensive and concise way. If the same information is present in multiple articles, combine this in one sentence and provide id's to these articles. Do not remove information that was allready present in the summary. Do not add a reference list."
+
+
+context2 = "Your are a scientific expert in field of spatial single cell genomics that writes a discussion about the latest research for its peers. Provided below is a summary generated from several scientific articles.  Rewrite this summary in a cohesive and very comprehensive way. Write about the scientific problems, solutions and key findings from all the articles discussed in the summary. Write concise and clear sentences. Mention all key findings from each article in the summary. Use only the information from the summary and do not give your opinion. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Add the article id's [ID] only when information from that article is mentioned in the summary. Each piece of information in the discussion that you write should be followed by the relevant id. Information from articles with an id that has lower value are more important and should be discussed more prominently (for example: information from [2] is more important than [5], information from [4] is more important than [10], ...). Do not write a summary paragraph at the end. Do not add a reference list. Do not mention the information is from abstracts.  Do not add a reference list."
+ 
+
+ summary = "This is a review of the latest research in the field of spatial single cell genomics."
+review = summary
+ 
+ n = nrow(data)
+ for (i in 1:n){
+ message(str_glue("Summarise article {i}"))
+
+prompt1 = str_glue("{context1}\nsummary:\n{review}\nabstract from article with id [{i}]:\n{data$title[i]} {data$abstract[i]}")
+data$prompt1[i] = prompt1
+good_summary = FALSE
+ while(!good_summary){
+response = create_chat_completion(
+  model="gpt-3.5-turbo-16k",
+  ## model="gpt-4",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt1
+  )),
+  ## temperature=.1,
+  max_tokens=13000,
+  ## top_p=.1,
+  ## frequency_penalty=0,
+  ## presence_penalty=0,
+  openai_api_key = key
+)
+ 
+data$openai_response1[i] = list(response)  
+summary = response$choices$message.content
+message(str_glue("\n{summary}"))
+data$summary[i] = summary
+
+ good_summary = check_ids_in_summary(1:i,summary)
+
+ if (!good_summary) message("\n !!! review is missing ids !!!\n")
+ }
+
+#------------
+
+ message(str_glue("Write review from summary with article {i}"))
+
+ prompt2 = str_glue("{context2}\nsummary:\n{summary}")
+data$prompt2[i] = prompt2
+good_summary = FALSE
+ while(!good_summary){
+response = create_chat_completion(
+  model="gpt-3.5-turbo-16k",
+  ## model="gpt-4",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt2
+  )),
+  ## temperature=.1,
+  max_tokens=13000,
+  ## top_p=.1,
+  ## frequency_penalty=0,
+  ## presence_penalty=0,
+  openai_api_key = key
+)
+ 
+data$openai_response2[i] = list(response)  
+review = response$choices$message.content
+message(str_glue("\n{review}"))
+data$review[i] = review
+
+ good_summary = check_ids_in_summary(1:i,review)
+
+ if (!good_summary) message("\n !!! Review is missing ids !!!\n")
+ }
+
+ }
+ 
+data
+
+write_rds(data, here("hackathon-ai-newsletter","data","processed","final_15092023_review.rds"))
+```
+
+### try 7
+
+Iteratively summarise each article
+I changed my summarisation algorithm a bit to prevent it to forget information.
+I loop over all abstract and in each step:
+1) I add the information from the new abstract to the summary of the previous abstracts.
+2) I check if all references are present in the summary by the mentioned ID tags , If and ID is missing, It forgot the information of that article and I rerun step 1
+3) I rewrite the summary by chat gpt assuming  the role of an scientific expert in the field. I also let it discuss higher ranked abstract more prominently
+4) I do step 2 again and if it fails I repeat 3
+Go to next abstract
+
+```{r}
+#| label: mockup-data
+
+input_path = here("hackathon-ai-newsletter","data","raw","mock_abstracts_for_summary","filtered-sc-genomics-7days_altmetrics_if_rank.yaml")
+
+data = yaml.load_file(input_path) |>
+  map_dfr(~tibble(abstract = .x$abstract
+               , title = .x$title
+                , keywords = list(.x$keywords)
+                 , rank1 = unlist(.x$if_rank)
+                 ,rank2 = unlist(.x$n_citation_rank)
+                 ,citations = unlist(.x$n_citation)
+                 ,doi = .x$doi
+                 )
+          ) |>
+  filter(!is.na(abstract)) |>
+  mutate(rank1_normalized = rank(rank1),
+         rank2_normalized = rank(rank2),
+         rank_aggregated = rank(rank1_normalized + rank2_normalized,ties = "random")) |>
+  arrange(rank_aggregated) |>
+  mutate(id = row_number())
+
+
+ref_generator = function(data, ids){
+ref = data |> transmute(id,  ref = str_glue("[{id}] {title};doi: {doi} ")) |> filter(id %in% ids)
+return(paste(ref$ref, collapse = "\n"))
+}
+
+ref_generator(data, 1:4) |> message()
+```
+
+```{r}
+#| label: sum
+
+check_ids_in_summary = function(ids,summary){
+ foundids =  str_extract_all(summary,"\\[[0-9]+\\]")[[1]]|> str_remove_all("\\[|\\]") |> unique () |> as.numeric()
+ all(ids %in% foundids)
+}
+
+data = mutate(data
+  ,summary = ""
+  ,prompt1 = NA
+  ,openai_response1 = NA
+  ,review= ""
+  ,prompt2 = NA
+  ,openai_response2 = NA
+ )
+
+context1 = "Provided below is a summary generated from several scientific articles. Also provide is the abstract from another article. Augment the summary by integrating the key scientific findings from the abstract. Extract from the abstract the scientific problem with context and the solution to that problem and include these in the summary. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Add the article id's [ID] where a scientific finding from that article is mentioned in the summary. Each piece of information in the summary should be followed by the relevant id. Do not remove scientific findings from the summary in the augemented summary! Use only the information in the summary and abstract to generate the augmented summary and write this in a structured, comprehensive and concise way. If the same information is present in multiple articles, combine this in one sentence and provide id's to these articles. Do not remove information that was allready present in the summary. Do not add a reference list."
+
+
+context2 = "Your are a scientific expert in field of spatial single cell genomics that writes a discussion about the latest research for its peers. Provided below is a summary generated from several scientific articles.  Rewrite this summary in a cohesive and very comprehensive way. Write about the scientific problems, solutions and key findings from all the articles discussed in the summary. Write concise and clear sentences. Mention all key findings from each article in the summary. Use only the information from the summary and do not give your opinion. References to each article mentioned in the summary are provided with an id in the format [ID] (for example: [1], [2], [3], ...) throughout the text. Add the article id's [ID] only when information from that article is mentioned in the summary. Each piece of information in the discussion that you write should be followed by the relevant id. Information from articles with an id that has lower value are more important and should be discussed more prominently (for example: information from [2] is more important than [5], information from [4] is more important than [10], ...). Do not write a summary paragraph at the end. Do not add a reference list. Do not mention that the information is from abstracts. Do not add a reference list."
+ 
+
+ summary = "This is a review of the latest research in the field of spatial single cell genomics."
+review = summary
+ n = nrow(data)
+ for (i in 1:n){
+ ref = ref_generator(data, 1:i)
+ message(str_glue("Summarise article {i}"))
+prompt1 = str_glue("{context1}\nsummary:\n{review}\n\nabstract from article with id [{i}]:\n{data$title[i]} {data$abstract[i]}")
+data$prompt1[i] = prompt1
+good_summary = FALSE
+ while(!good_summary){
+response = create_chat_completion(
+  model="gpt-3.5-turbo-16k",
+  ## model="gpt-4",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt1
+  )),
+  ## temperature=.1,
+  max_tokens=13000,
+  ## top_p=.1,
+  ## frequency_penalty=0,
+  ## presence_penalty=0,
+  openai_api_key = key
+)
+ 
+data$openai_response1[i] = list(response)  
+summary = response$choices$message.content
+
+message(str_glue("\n{summary}"))
+
+ good_summary = check_ids_in_summary(1:i,summary)
+
+ if (!good_summary) message("\n !!! review is missing ids !!!\n")
+summary = str_glue("{summary}\n{ref}")
+data$summary[i] = summary
+ }
+
+#------------
+
+ message(str_glue("Write review from summary with article {i}"))
+
+ prompt2 = str_glue("{context2}\nsummary:\n{summary}")
+data$prompt2[i] = prompt2
+good_summary = FALSE
+ while(!good_summary){
+response = create_chat_completion(
+  model="gpt-3.5-turbo-16k",
+  ## model="gpt-4",
+  messages=list(list(
+      "role" = "user",
+      "content" = prompt2
+  )),
+  ## temperature=.1,
+  max_tokens=13000,
+  ## top_p=.1,
+  ## frequency_penalty=0,
+  ## presence_penalty=0,
+  openai_api_key = key
+)
+ 
+data$openai_response2[i] = list(response)  
+review = response$choices$message.content
+message(str_glue("\n{review}"))
+
+ good_summary = check_ids_in_summary(1:i,review)
+ if (!good_summary) message("\n !!! Review is missing ids !!!\n")
+ }
+
+review = str_glue("{review}\n{ref}")
+data$review[i] = review
+ }
+ 
+data
+
+write_rds(data, here("hackathon-ai-newsletter","data","processed","final_15092023_review.rds"))
+```
+
+### next steps
+
+Maybe process in reverse order so higher ranked abstracts are processed more recently.
+Also do an extra pass with final summary+each abstract that does kind of a fact check to see that there are no errors in the final summary
